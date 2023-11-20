@@ -1,0 +1,3 @@
+[submodule "statement"]
+	path = statement
+	url = https://github.com/dialoa/statement

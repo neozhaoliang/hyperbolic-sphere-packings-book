@@ -1,0 +1,101 @@
+---
+title: Coxeter 群，双曲蜂巢和双曲球堆
+subtitle: "Copyright (c) 2023 - Zhao Liang <mathzhaoliang@gmail.com>"
+rights: MIT License
+toc-title: "目录"
+abstract: |
+  本文介绍 Coxeter 群与 Boyd-Maxwell 球堆的基本概念，以及它们之间的联系。
+mainfont: DejaVu Sans
+link-citations: true
+statement:
+  supply-header: no
+  count-within: section
+  crossref-prefixes: true
+statement-kinds:
+  theorem:
+    label: 定理
+    counter: theorem
+  lemma:
+    label: 引理
+    counter: theorem
+  proposition:
+    label: 命题
+    counter: theorem
+  corollary:
+    label: 推论
+    counter: theorem
+  definition:
+    label: 定义
+    counter: none
+    style: definition
+  proof:
+    label: 证明
+    counter: none
+    style: proof
+  note:
+    label: 注记
+    counter: none
+    style: note
+  example:
+    label: 例
+    counter: none
+    style: definition
+statement-styles:
+    definition:
+      punctuation: '：'
+    note:
+      punctuation: '：'
+references:
+  - type: article-journal
+    id: Maxwell82
+    author: "George Maxwell"
+    issued:
+      year: 1982
+    title: 'Sphere packings and hyperbolic reflection groups'
+    title-short: "Maxwell'82"
+    container-title: 'Journal of Algebra'
+    volume: 79
+    issue: 1
+    page: 78-97
+    DOI: 10.1016/0021-8693(82)90318-0
+    URL: https://www.sciencedirect.com/science/article/pii/0021869382903180
+  - type: book
+    id: Humphreys90
+    issued:
+      year: 1990
+    author: Humphreys, J.
+    title: "Reflection Groups and Coxeter Groups"
+    container-title: "Cambridge Studies in Advanced Mathematics"
+    press: Cambridge University Press
+    DOI: 10.1017/CBO9780511623646
+  - type: book
+    id: ratcliffe
+    author: John G. Ratcliffe
+    title: Foundations of Hyperbolic Manifolds
+    press: Springer New York, NY
+    DOI: 10.1007/978-0-387-47322-2
+    container-title: Graduate Texts in Mathematics
+    issued:
+      year: 2006
+  - type: book
+    id: roman
+    author: Steven Roman
+    title: Advanced Linear Algebra
+    press: Springer New York, NY
+    DOI: 10.1007/978-0-387-72831-5
+    container-title: Graduate Texts in Mathematics
+    issued:
+      year: 2008
+  - type: article-journal
+    id: Maxwell89
+    author: "George Maxwell"
+    issued:
+      year: 1989
+    title: "Wythoff's construction for Coxeter groups"
+    container-title: "Journal of Algebra"
+    volume: 123
+    issue: 2
+    page: 351-377
+    DOI: 10.1016/0021-8693(89)90051-3
+---
+

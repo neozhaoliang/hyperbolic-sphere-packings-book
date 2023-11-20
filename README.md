@@ -1,1 +1,1 @@
-# hyperbolic-sphere-packings-book
+The book for https://github.com/neozhaoliang/Hyperbolic-Honeycombs/

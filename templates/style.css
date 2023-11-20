@@ -1,0 +1,390 @@
+html body {
+    color: #222;
+    font-family: "Roboto", "WenQuanYi Zen Hei", "Microsoft YaHei", sans-serif;
+    font-size: 17px;
+    line-height: 1.5em;
+    padding: 1em;
+    margin: auto;
+    max-width: 760px;
+    background: #fff;
+    counter-reset: h1 h2 h3;
+}
+
+.subtitle {
+    padding-top: 1em;
+    font-size: 1.0em;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* --- Links --------------------------------------------------------------- */
+a {
+    color: #06e;
+    text-decoration:none;
+}
+a:visited {
+    color: #06e;
+}
+a:hover {
+    color: #06e;
+    border-bottom: .5px solid #06e;
+}
+a:active {
+    color:#000000;
+}
+
+/* --- Headers ------------------------------------------------------------- */
+h1 > span.header-section-number {
+    margin-right:10px;
+    color: white;
+    background-color: black;
+    padding-left: 10px; padding-right:10px;
+}
+
+::selection {
+    color: #000;
+    background-color: #f0f0ff;
+}
+
+h1, h2, h3 {
+    padding: 15px 0 3px;
+    clear: both;
+    font-weight: 400;
+}
+h1 { font-size: 1.5em; counter-reset: h2;   padding-top: 2.5em;}
+h2 { font-size: 1.25em;  counter-reset: h3; padding-top: 1.5em;}
+h3, h4, h5, h6 { font-size: 1.00em; }
+h1, h1 a, h1 a:visited,
+h2, h2 a, h2 a:visited,
+h3, h3 a, h3 a:visited {
+    color: black;
+    text-decoration: none;
+}
+h1, h1 a, h1 a:visited {
+    color: black;
+    margin-top: 3em;
+    padding-left:  5%;
+    margin-left:  -5%;
+    text-decoration: none;
+}
+h1 {
+    border-bottom: 2px solid black;
+}
+
+h1 a:hover {
+     color: #06e;
+/*       color: white;
+       background-color: black; */
+}
+h2 a:hover, h3 a:hover {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+/* --- Images -------------------------------------------------------------- */
+
+img {
+    padding: 4px;
+    background-color: #F5F5F5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: block;
+    margin: auto;
+}
+
+.sourceCode {
+    display: block;
+    margin: auto !important;
+    padding: 4px;
+    font-family: Consolas, monospace;
+    line-height: 90%;
+}
+
+.bordered {
+    border: 1px solid black;
+}
+
+#TOC {
+    padding-top: 1em;
+}
+
+#TOC #toc-title {
+    border-bottom: 1px solid black;
+    margin-top: -3em;
+    padding-left:  5%;
+    margin-left:  -5%;
+}
+
+#TOC > ul {
+    padding-left: 0;
+    column-count: 3;
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+}
+
+#TOC ul ul {
+    padding-left: 1em;
+}
+
+#TOC > ul  li {
+    color: #06e;
+    font-weight: 400;
+}
+
+#TOC > ul  li .toc-section-number::after {
+    content: ". ";
+}
+
+#TOC > ul li li {
+    font-weight: 100;
+    font-size: 90%;
+}
+
+#TOC > ul > li li:before {
+    content: "•"; /* Insert content that looks like bullets */
+    padding-right: 0.5em;
+}
+
+iframe {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* --- Title/Subtitle ------------------------------------------------------ */
+h1.title::before { content: none; }
+h1.title {
+    font-size: 2em;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    margin-top:    64px;
+    margin-bottom: 12px;
+    padding: 0;
+    border: none;
+}
+h2.subtitle::before { content: none; }
+h2.subtitle {
+    font-size: 1.0em;
+    font-weight: 500;
+    text-align: center;
+    padding: 0;
+}
+.title-logos {
+    /* opacity: 0.15; */
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 64px;
+}
+.title-logos p {
+    text-align: center;
+}
+
+/* --- Code ---------------------------------------------------------------- */
+code {
+    font-size: 95%;
+    font-weight: 300;
+    font-family: 'Source Code Pro';
+}
+pre.code,
+pre.output {
+    font-size:      85%;
+    font-family:    'Source Code Pro', monospace;
+    line-height:    125%;
+    padding-left:   2.0em;
+    padding-top:    0.5em;
+    padding-bottom: 0.5em;
+    overflow-x: auto;
+}
+pre.code {
+
+    background:     #fcfcfc;
+    border-top:     .5px solid #ccc;
+    border-bottom:  .5px solid #ccc;
+}
+pre.output {
+    background:     #fff;
+    border:         none;
+
+}
+
+.function, .class {
+    font-weight: 400;
+}
+.comment {
+    color: #459;
+}
+
+
+
+/* --- Tables -------------------------------------------------------------- */
+table {
+    margin: 1em auto;
+    border-style: none;
+    border-collapse: collapse;
+    empty-cells: hide;
+    max-width: 60%;
+    min-width: 40%;
+    display: revert;
+}
+
+table th, table td {
+    height: 35px;
+    border: 1px solid #666;
+    padding: 0 10px;
+}
+
+table tr:hover {
+    background: #FF0;
+}
+
+table td:nth-child(1) {
+    white-space: nowrap;
+}
+
+tr {
+    border-bottom: none !important;
+}
+
+th, td {
+  padding: 5px;
+}
+
+td code {
+  background: none !important;
+  padding: 0;
+}
+
+td:empty {
+  visibility: hidden;
+  border-style: none;
+}
+
+tr:nth-child(even) td {
+    background: #f0f0f0;
+}
+
+div.blockquote, blockquote {
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 0.6rem 0.6rem 0.6rem 1.2rem;
+    border-left: 5px solid #F00090;
+    margin: 1.5em 0em;
+    color: black;
+}
+
+.statement.plain {
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 0.6rem 0.6rem 0.6rem 1.2rem;
+    border-left: 5px solid #F00090;
+    margin: 1.5em 0em;
+    color: black;
+}
+
+.statement.example.definition {
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 0.6rem 0.6rem 0.6rem 1.2rem;
+    border-left: 5px solid #3000F0;
+    margin: 1.5em 0em;
+    color: black;
+
+}
+.statement.definition {
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 0.6rem 0.6rem 0.6rem 1.2rem;
+    border-left: 5px solid #F00090;
+    margin: 1.5em 0em;
+    color: black;
+}
+
+.statement.plain .statement-label {
+    font-weight: bold;
+}
+
+.statement.note.unnumbered {
+    margin: 2em auto;
+    padding: 0.5em;
+    font-size: 85%;
+    width: 90%;
+}
+
+.statement.definition .statement-label {
+    font-weight: bold;
+}
+
+
+.statement.proof .statement-label {
+    font-weight: bold;
+}
+
+.statement.plain p:first-child {
+     text-indent: 0pt;
+}
+
+.statement.plain .statement-info {
+    font-style: normal; font-weight: normal; font-variant: normal;
+}
+
+/* --- Bibliography -------------------------------------------------------- */
+.csl-entry {
+    border-left: 1px solid #777;
+    padding-left: 2.5em;
+    margin: 1.5em 0em;
+    font-size: 85%;
+    line-height: 125%;
+}
+
+@media all and (max-width: 1400px) {
+    .note,
+    .legend {
+        box-sizing: border-box;
+        width: 80%;
+        margin: 10px auto;
+        float: none;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        border-radius: 5px;
+        padding: 10px;
+    }
+}
+
+@media all and (max-width: 870px) {
+    pre.code,
+    pre.output {
+        padding-left: 0.5em;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+video {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: block;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 90%;
+    font-style: light;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
