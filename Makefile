@@ -4,9 +4,9 @@
 
 # Build configuration
 
-BUILD = build
+BUILD = docs
 MAKEFILE = Makefile
-OUTPUT_FILENAME = book
+OUTPUT_FILENAME = index
 METADATA = metadata.yml
 CHAPTERS = chapters/*.md
 TOC = --toc --toc-depth 2
@@ -87,7 +87,7 @@ clean:
 
 epub:	$(BUILD)/epub/$(OUTPUT_FILENAME).epub
 
-html:	$(BUILD)/html/$(OUTPUT_FILENAME).html
+html:	$(BUILD)/$(OUTPUT_FILENAME).html
 
 pdf:	$(BUILD)/pdf/$(OUTPUT_FILENAME).pdf
 
@@ -99,12 +99,12 @@ $(BUILD)/epub/$(OUTPUT_FILENAME).epub:	$(EPUB_DEPENDENCIES)
 	$(CONTENT) | $(CONTENT_FILTERS) | $(PANDOC_COMMAND) $(ARGS) $(EPUB_ARGS) -o $@
 	$(ECHO_BUILT)
 
-$(BUILD)/html/$(OUTPUT_FILENAME).html:	$(HTML_DEPENDENCIES)
+$(BUILD)/$(OUTPUT_FILENAME).html:	$(HTML_DEPENDENCIES)
 	$(ECHO_BUILDING)
-	$(MKDIR_CMD) $(BUILD)/html
+	$(MKDIR_CMD) $(BUILD)
 	$(CONTENT) | $(CONTENT_FILTERS) | $(PANDOC_COMMAND) $(ARGS) $(HTML_ARGS) -o $@
-	$(COPY_CMD) $(IMAGES) $(BUILD)/html/
-	$(COPY_CMD) $(FONTS) $(BUILD)/html/
+	$(COPY_CMD) $(IMAGES) $(BUILD)/
+	$(COPY_CMD) $(FONTS) $(BUILD)/
 	$(ECHO_BUILT)
 
 $(BUILD)/pdf/$(OUTPUT_FILENAME).pdf:	$(PDF_DEPENDENCIES)
