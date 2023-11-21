@@ -1,6 +1,6 @@
 ## Tits 锥
 
-在获得了 $V$ 中关于根系的一些知识后，我们下面将转移到 $V$ 的对偶空间 $V^\ast$ 中，讨论万花筒的结构。
+在获得了 $V$ 中关于根系的一些知识后，我们下面转移到 $V$ 的对偶空间 $V^\ast$ 中讨论万花筒的结构。
 
 设 $V^\ast$ 是 $V$ 的对偶空间，我们有一个自然的双线性映射
 $$V\times V^\ast\to\R: \lfun{v}{f}= f(v).$$
@@ -58,7 +58,7 @@ $\barfd=\cone{\Delta^\ast}$。
 :::
 
 证明：对 $x\in V^\ast$，设 $x=\sum_{t\in S}c_t\omega_t$，注意到对任何 $s\in S$ 有 $\lfun{\alpha_s}{x} = c_s$，所以
-$$x\in\cone{\Delta^\ast}\Leftrightarrow c_s\geq0 \text{ for all } s \in S  \Leftrightarrow \lfun{\alpha_s}{x}\geq 0 \text{ for all } s\in S \Leftrightarrow x\in\barfd.
+$$x\in\cone{\Delta^\ast}\Leftrightarrow c_s\geq0 \text{ for all } s \in S \Leftrightarrow \lfun{\alpha_s}{x}\geq 0 \text{ for all } s\in S \Leftrightarrow x\in\barfd.
 $$
 $\blacksquare$
 
@@ -66,12 +66,12 @@ $\blacksquare$
 $$\negf{x}= \{\lambda\in \Phi^+\mid \lfun{\lambda}{x}<0\}.$$
 $\negf{x}$ 是正根 $\Phi^+$ 的子集，表示 $x$ 位于哪些镜子的背面。
 
-一个显然的事实是，$\barfd$ 位于所有镜子的正面，即 $\overline{\mathcal{D}}=\{x\in V^\ast\mid \mathrm{Neg}(x)=\emptyset\}$。
+一个显然的事实是，$\barfd$ 位于所有镜子的正面，即 $\barfd=\{x\in V^\ast\mid\negf{x}=\emptyset\}$。
 
 我们来证明：
 
 :::{.theorem #tits-neg-finite}
-Tits 锥 $\tc = \{x\in V^\ast \mid |\mathrm{Neg}(x)| < \infty\}$。
+Tits 锥 $\tc = \{x\in V^\ast \mid |\negf{x}| < \infty\}$。
 :::
 
 ::: note
@@ -98,11 +98,11 @@ $\Leftarrow$: 反之若 $|\negf{x}|<\infty$，我们来论证可以选择 $w\in 
 
 严格的论证如下：
 
-若 $\negf{x}=\emptyset$ 这显然成立，因为这时 $x$ 本身就落在 $\barfd$ 中。当 $\negf{x}\ne\emptyset$ 时，其中一定包含一个单根 $\alpha_s\in\Delta$，于是 $\lfun{\alpha_s}{x}< 0$。考虑 $x$ 关于 $\alpha_s$ 的镜像点 $sx$，我们来分析集合 $\negf{sx}$，即那些遮挡 $sx$ 的镜子。我们断言 $\negf{sx} = s\cdot(\negf{x}-\{\alpha_s\})$，即 $\negf{sx}$ 元素个数比 $\negf{x}$ 严格减少 1。
+若 $\negf{x}=\emptyset$ 这显然成立，因为这时 $x$ 本身就落在 $\barfd$ 中。当 $\negf{x}\ne\emptyset$ 时，其中一定包含一个单根 $\alpha_s\in\Delta$，于是 $\lfun{\alpha_s}{x}< 0$。考虑 $x$ 关于 $\alpha_s$ 的镜像点 $sx$，我们来分析集合 $\negf{sx}$，即那些遮挡 $sx$ 的镜子。我们断言 $\negf{sx} = s\cdot(\minus{\negf{x}}{\alpha_s})$，即 $\negf{sx}$ 元素个数比 $\negf{x}$ 严格减少 1。
 
 首先 $sx$ 位于 $\alpha_s$ 的正面，所以 $\alpha_s\notin\negf{sx}$。设 $\lambda\ne\alpha_s$ 是任一正根，则 $s\lambda$ 也是正根。于是
 $$\lambda\in\negf{sx}\Leftrightarrow\lfun{sx}{\lambda}<0\Leftrightarrow\lfun{x}{s\lambda}<0\Leftrightarrow s\lambda\in\negf{x}.$$
-即 $\lambda\leftrightarrow s\lambda$ 是 $\negf{sx}$ 和 $\negf{x}-\{\alpha_s\}$ 的一一对应，从而 $\negf{sx} = s\cdot(\negf{x}-\{\alpha_s\})$。重复此过程我们最终可以取一组 $s_{i_1},\ldots,s_{i_k}$ 使得 $y=s_{i_1}\cdots s_{i_k}x$ 满足 $\negf{y}=\emptyset$，从而 $y\in\barfd$，这就证明了结论。
+即 $\lambda\leftrightarrow s\lambda$ 是 $\negf{sx}$ 和 $\minus{\negf{x}}{\alpha_s}$ 的一一对应，从而 $\negf{sx} = s\cdot(\minus{\negf{x}}{\alpha_s})$。重复此过程我们最终可以取一组 $s_{i_1},\ldots,s_{i_k}$ 使得 $y=s_{i_1}\cdots s_{i_k}x$ 满足 $\negf{y}=\emptyset$，从而 $y\in\barfd$，这就证明了结论。
 
 :::{.corollary #tits-convex}
 Tits 锥 $\tc$ 是凸锥。
@@ -170,7 +170,7 @@ $$z=(1-t)x+ty\qquad t<0,$$
 
 $\Leftarrow$：反之若 $W_J$ 是有限群，仍然任取 $y\in\fd$。
 
-对任何镜面 $s\in S\backslash J$，由于 $x$ 不属于此镜面，所以 $\lfun{\alpha_s}{x}>0$。另一方面对任何 $w\in W_J$，根据 @Pre:remain-positive-root $w^{-1}\alpha_s$ 仍然是正根，所以也有 $\lfun{\alpha_s}{wy}=\lfun{w^{-1}\alpha_s}{y}>0$ 成立，于是
+对任何镜面 $s\in \Minus{S}{J}$，由于 $x$ 不属于此镜面，所以 $\lfun{\alpha_s}{x}>0$。另一方面对任何 $w\in W_J$，根据 @Pre:remain-positive-root $w^{-1}\alpha_s$ 仍然是正根，所以也有 $\lfun{\alpha_s}{wy}=\lfun{w^{-1}\alpha_s}{y}>0$ 成立，于是
 $$\delta = \min\left\{\frac{\lfun{\alpha_s}{x}}{\lfun{\alpha_s}{wy}}\,\middle|\, \alpha_s\in S\backslash J,\, w\in W_J\right\}>0$$
 是一个正数，将上面的分母乘到左边然后对 $w\in W_J$ 求和，我们有
 $$\delta\cdot\lfun{\alpha_s}{\sum_{w\in W_J}wy}\leq \lfun{\alpha_s}{x}\cdot |W_J| < 2\lfun{\alpha_s}{x}\cdot |W_J|.$$
@@ -192,7 +192,3 @@ $$\lfun{\alpha_s}{v}=\lfun{w\alpha_s}{wv}=\lfun{w\alpha_s}{z}\ne0$$
 对任何 $\alpha_s\in\Delta$ 成立，所以 $v\in\fd\subset\tc^\circ$，从而 $z=wv\in w\fd\subset\tc^\circ$。
 
 现在 $x$ 是 $z$ 和 $y$ 的线性组合 $x = \frac{1}{2|W_J|}(z + \delta y)$。我们来说明 $x$ 也属于 $\tc^\circ$。由于 $z,y\in\tc^\circ$，所以 $\frac{1}{2|W_J|}z, \frac{\delta}{2|W_J|}y\in\tc^\circ$，即存在开集 $A,B$ 满足 $\frac{1}{2|W_J|}z\in A\subset\tc^\circ$，$\frac{\delta}{2|W_J|}y\in B\subset \tc^\circ$，于是 $x\in A+B=\cup_{p\in B}(A+p)$，这是一组开集的并，所以 $x\in\tc^\circ$，命题得证，从而 @Pre:tits-int-finite-stabilizer 得证。$\blacksquare$
-
-:::note
-在上面最后一段中，我们实际上证明了一个凸锥的内部仍然是凸锥。
-:::

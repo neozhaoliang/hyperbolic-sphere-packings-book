@@ -4,7 +4,7 @@
 
 # Build configuration
 
-BUILD = docs
+BUILD = build
 MAKEFILE = Makefile
 OUTPUT_FILENAME = index
 METADATA = metadata.yml

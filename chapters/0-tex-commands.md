@@ -1,5 +1,6 @@
 \newcommand{\lfun}[2]{\langle #1,\,#2\rangle}
 \newcommand{\minus}[2]{#1\setminus\{#2\}}
+\newcommand{\Minus}[2]{#1\backslash #2}
 \newcommand{\span}{\mathrm{span}}
 \newcommand{\x}{\mathbf{x}}
 \newcommand{\y}{\mathbf{y}}

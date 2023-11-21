@@ -10,13 +10,11 @@ I_p&&\\
 && {\bf 0}_r
 \end{pmatrix}.
 $$
-其中 $p+q+r=n$。
+其中 $p+q+r=n$。我们用三元组 $(p,q,r)$ 表示内积的**惯性指数**。$p,q$ 分别叫做 $\inn$ 的**正惯性指数**和**负惯性指数**。例如：
 
-在 $n$ 确定的情况下，我们用二元组 $(p,q)$ 表示内积的符号。例如：
-
-1. $(n,0)$ 表示 $p=n,\,q=0$，即 $\inn$ 是正定的。
-2. $(n-1,0)$ 表示 $p=n-1,\,q=0$，从而 $r=1$，即 $\inn$ 是半正定的。
-3. $(n-1,1)$ 表示 $p=n-1,\,q=1$，即 $\inn$ 是双曲 (Lorentzian) 内积。
+1. $(n,0, 0)$ 时 $\inn$ 是正定的。
+2. $(n-1,0, 1)$ 时 $\inn$ 是半正定的。
+3. $(n-1,1,0)$ 时 $\inn$ 是双曲 (Lorentzian) 内积。
 
 $V$ 的根空间 (radical) 定义为
 $$\rad(V) = \{v\in V\mid (v, u)=0,\  \forall u\in V\}.$$
@@ -31,8 +29,7 @@ $$U^\bot = \{v\in V\mid (v,u)=0,\  \forall u\in U\}.$$
 :::
 **证明**：见 [@roman Chapter 11]。$\blacksquare$
 
-
-当 $\inn$ 的符号是 $(n-1,1)$ 时，$V$ 在此内积下成为一个 Lorentzian 空间。我们称 $v\in V$ 是
+当 $\inn$ 的符号是 $(n-1,1,0)$ 时，$V$ 在此内积下成为一个 Lorentzian 空间。我们称 $v\in V$ 是
 
 1. space-like 的，如果 $(v,v)>0$；
 2. light-like 的，如果 $(v,v)=0$；
@@ -54,9 +51,9 @@ $$U^\bot = \{v\in V\mid (v,u)=0,\  \forall u\in U\}.$$
 **证明**：2 是 1 的直接推论。而 1 可以由 @Pre:orth-complement 的第二条立刻得出。
 
 ::: example
-1. 如果 $v$ 是 space-like 的向量，那么 $(\R v)^\bot$ 是 $n-1$ 维的 time-like 的子空间，符号为 $(n-2, 1)$，并且 $V=\R v\oplus (\R v)^\bot$。
-2. 如果 $v$ 是 time-like 的向量，那么 $(\R v)^\bot$ 是 $n-1$ 维的 space-like 的子空间，符号为 $(n-1, 0)$，并且 $V=\R v\oplus(\R v)^\bot$。
-3. 如果 $v$ 是 light-like 的向量，那么 $(\R v)^\bot$ 是 $n-1$ 维的 light-like 的子空间，符号为 $(n-2,0)$。这时 $V\ne \R v\oplus(\R v)^\bot$，因为 $v\in\R v\cap(\R v)^\bot$。
+1. 如果 $v$ 是 space-like 的向量，那么 $(\R v)^\bot$ 是 $n-1$ 维的 time-like 的子空间，符号为 $(n-2, 1,0)$，并且 $V=\R v\oplus (\R v)^\bot$。
+2. 如果 $v$ 是 time-like 的向量，那么 $(\R v)^\bot$ 是 $n-1$ 维的 space-like 的子空间，符号为 $(n-1, 0,0)$，并且 $V=\R v\oplus(\R v)^\bot$。
+3. 如果 $v$ 是 light-like 的向量，那么 $(\R v)^\bot$ 是 $n-1$ 维的 light-like 的子空间，符号为 $(n-2,0,1)$。这时 $V\ne \R v\oplus(\R v)^\bot$，因为 $v\in\R v\cap(\R v)^\bot$。
 :::
 
 :::{#lorentzinian-decomposition}

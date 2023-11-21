@@ -21,16 +21,16 @@ $\Leftarrow$: $W$ 是有限群说明 $\Phi$ 也是有限的，从而对任何 $x
 我们还需要另一种 $W$ 有限的刻画方式，它在后面分析仿射和双曲的情形时会用到。
 
 :::{.proposition #phi-J-finite}
-设 $W$ 是不可约 Coxeter 群。如果存在 $J\subsetneqq S$ 使得 $\Phi\backslash \Phi_J$ 是有限集，则 $W$ 必然是有限群。
+设 $W$ 是不可约 Coxeter 群。如果存在 $J\subsetneqq S$ 使得 $\Minus{\Phi}{\Phi_J}$ 是有限集，则 $W$ 必然是有限群。
 :::
 
-**证明**：由于 $J\subsetneqq S$ 所以 $\Phi\backslash\Phi_J$ 是非空的。我们考虑 $W$ 的 Coxeter 图 $\Gamma$：由于 $W$ 不可约，所以对任何 $s\in S$ 都存在一条连接 $s$ 和 $S\backslash J$ 的路径：即存在 $s_0,s_1,\ldots,s_m$ 使得
-$$s_0=s\sim s_1\sim\cdots\sim s_m\in S\backslash J.$$
-我们称 $m$ 为这条路径的长度。所有这样的路径的最短长度是 $s$ 和 $S\backslash J$ 之间的图距离，记作 $d(s)$。于是 $d(s)=0$ 当且仅当 $s\in S\backslash J$。
+**证明**：由于 $J\subsetneqq S$ 所以 $\Minus{\Phi}{\Phi_J}$ 是非空的。我们考虑 $W$ 的 Coxeter 图 $\Gamma$：由于 $W$ 不可约，所以对任何 $s\in S$ 都存在一条连接 $s$ 和 $\Minus{S}{J}$ 的路径：即存在 $s_0,s_1,\ldots,s_m$ 使得
+$$s_0=s\sim s_1\sim\cdots\sim s_m\in \Minus{S}{J}.$$
+我们称 $m$ 为这条路径的长度。所有这样的路径的最短长度是 $s$ 和 $\Minus{S}{J}$ 之间的图距离，记作 $d(s)$。于是 $d(s)=0$ 当且仅当 $s\in\Minus{S}{J}$。
 
-接下来我们按照 $d(s)$ 的升序对 $S$ 重新排序，得到 $S=\{s_1,s_2,\ldots,s_n\}$，使得对任何 $i<j$ 都有 $d(s_i)\leq d(s_j)$。于是 $S\backslash J$ 中的顶点都排在最前面，即存在 $1\leq r<n$ 使得 $S\backslash J=\{s_1,\ldots,s_r\}$。然后把 $\Phi^+$ 拆成 $n$ 个不相交集合的并：记 $\Phi_i^+$ 是所有可以由 $\{\alpha_i,\ldots,\alpha_n\}$ 张成，且 $\alpha_i$ 项系数不为 0 的正根组成的集合：
+我们按照 $d(s)$ 的升序对 $S$ 重新排序，得到 $S=\{s_1,s_2,\ldots,s_n\}$，使得对任何 $i<j$ 都有 $d(s_i)\leq d(s_j)$。于是 $\Minus{S}{J}$ 中的顶点都排在最前面，即存在 $1\leq r<n$ 使得 $\Minus{S}{J}=\{s_1,\ldots,s_r\}$。然后把 $\Phi^+$ 拆成 $n$ 个不相交集合的并：记 $\Phi_i^+$ 是所有可以由 $\{\alpha_i,\ldots,\alpha_n\}$ 张成，且 $\alpha_i$ 项系数不为 0 的正根组成的集合：
 $$\Phi_i^+=\{\lambda\mid \lambda\in\Phi^+,\ \lambda=\sum_{j=i}^nc_j\alpha_j,\ c_i\ne 0\}.$$
-则不难看出有 $\Phi^+=\Phi_1^+\cup\cdots\cup\Phi^+_n$，以及 $\Phi^+\backslash\Phi_J^+=\Phi_1^+\cup\cdots\cup\Phi^+_r$。由于假设了 $\Phi\backslash\Phi_J$ 是有限的，所以 $\Phi_1^+,\ldots,\Phi^+_r$ 都是有限的。
+则不难看出有 $\Phi^+=\Phi_1^+\cup\cdots\cup\Phi^+_n$，以及 $\Minus{\Phi^+}{\Phi_J^+}=\Phi_1^+\cup\cdots\cup\Phi^+_r$。由于假设了 $\Minus{\Phi}{\Phi_J}$ 是有限的，所以 $\Phi_1^+,\ldots,\Phi^+_r$ 都是有限的。
 
 我们用归纳法依次论证 $\Phi^+_{r+1},\ldots,\Phi^+_{n}$ 也都是有限集：设 $r+1\leq i\leq n$ 且已知对所有 $j<i$，$\Phi_1^+,\ldots,\Phi^+_j$ 都是有限集，
 现在观察 $\Phi^+_i$，注意必然有 $d(s_i)\geq1$，所以存在 $j<i$ 使得 $d(s_j)<d(s_i)$ 且 $s_j\sim s_i$。集合 $s_j\Phi_i^+$ 仍然都是正根，并且它们的 $\alpha_j$ 项系数都不是 0，从而 $s_j\Phi_i^+\subset\Phi^+_j$，于是 $|\Phi_i^+|\leq |\Phi^+_j|$ 从而也是有限集。
@@ -47,9 +47,9 @@ $$\Phi_i^+=\{\lambda\mid \lambda\in\Phi^+,\ \lambda=\sum_{j=i}^nc_j\alpha_j,\ c_
 $$\tc\cap-\tc=\bigcup_{w_1,w_2\in W}w_1\barfd\cap w_2(-\barfd),$$
 所以若 $\tc\cap-\tc\ne\{0\}$ 则存在非零向量 $x\in\barfd$ 和 $w\in W$ 满足 $-wx\in\barfd$。令
 $$J=\{s\in S\mid \lfun{\alpha_s}{x}=0\},$$
-则 $x\ne 0$ 说明 $J\subsetneqq S$ 是真子集，且对任何 $\lambda\in\Phi^+\backslash\Phi^+_J$ 都有 $\lfun{\lambda}{x}>0$，并且对这样的 $\lambda$ 有
+则 $x\ne 0$ 说明 $J\subsetneqq S$ 是真子集，且对任何 $\lambda\in\Minus{\Phi^+}{\Phi^+_J}$ 都有 $\lfun{\lambda}{x}>0$，并且对这样的 $\lambda$ 有
 $$\lfun{w\lambda}{-wx} = \lfun{\lambda}{-x}<0.$$
-而 $-wx\in\barfd$，所以 $w\lambda$ 是负根，从而 $\Phi^+\backslash\Phi^+_J\subset\negf{w}$，从而 $|\Phi^+\backslash\Phi^+_J|\leq |\negf{w}|=l(w)<\infty$，由 @Pre:phi-J-finite $W$ 是有限群，这与已知矛盾。
+而 $-wx\in\barfd$，所以 $w\lambda$ 是负根，从而 $\Minus{\Phi^+}{\Phi^+_J}\subset\negf{w}$，从而 $|\Minus{\Phi^+}{\Phi^+_J}|\leq |\negf{w}|=l(w)<\infty$，由 @Pre:phi-J-finite $W$ 是有限群，这与已知矛盾。
 
 :::{.corollary #dual-cone-non-trivial}
 如果 $W$ 不可约且是无限群，则对偶锥 $\tc^\ast\ne\{0\}$。
@@ -70,7 +70,7 @@ $$\lfun{w\lambda}{-wx} = \lfun{\lambda}{-x}<0.$$
 4. $A$ 的任何 $\leq n-1$ 阶主子式都是正定的。
 :::
 
-我们花点笔墨解释一下这几个事实的含义。回忆 $W$ 称作仿射是指内积 $\inn$ 是半正定但不是正定的。这个定义中没有要求 $\inn$ 的 Sylvester 符号中有几个 0，但是上面的结论 1, 2 告诉我们，在 $W$ 不可约的前提下，Sylvester 符号中有且只有一个 0，并且 $\rad(V)$ 由一个向量 $\delta$ 生成。$\delta$ 的所有系数都非零并且同号，并且 $W$ 保持 $\delta$ 不动。
+我们花点笔墨解释一下这几个事实的含义。回忆 $W$ 称作仿射是指内积 $\inn$ 是半正定但不是正定的。这个定义中没有要求 $\inn$ 的符号中有几个 0，但是上面的结论 1, 2 告诉我们，在 $W$ 不可约的前提下，$\inn$ 的符号中有且只有一个 0，并且 $\rad(V)$ 由一个向量 $\delta$ 生成。$\delta$ 的所有系数都非零并且同号，并且 $W$ 保持 $\delta$ 不动。
 
 我们来快速验证一下 3。由 $z^TA=0$ 可得对任何 $t\in S$ 有 $\sum z_s(\alpha_s,\alpha_t)=(\delta,\alpha_t)=0$，从而 $t(\delta)=\delta-2(\delta,\alpha_t)\alpha_t=\delta$，即任何单反射保持 $\delta$ 不动，从而 $W$ 保持 $\delta$ 不动。
 
@@ -120,7 +120,7 @@ $$0 = \lfun{\delta}{x}=\lfun{\delta}{wy}=\lfun{w^{-1}\delta}{y}=\lfun{\delta}{y}
 在双曲的情形，Tits 锥 $\tc$ 包含 $\N_+$ 或者 $\N_-$ 之一。
 :::
 
-![图中红色的锥是基本区域，在 $W$ 作用下密铺了 $\Q$ 的上半分支](images/Tits_hyperbolic.png){width=350}
+![图中红色的锥是基本区域 $\fd$，在 $W$ 作用下 $\tc$ 密铺了 $\N_+$](images/Tits_hyperbolic.png){width=350}
 
 **证明**：首先注意到对任何 $x\in\Q_+$ 和 $y\in\Q_-$ 有 $(x,y)\geq0$，所以 $\Q_+$ 和 $\Q_-$ 互相包含在对方的对偶锥中。
 

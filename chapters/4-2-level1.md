@@ -6,7 +6,11 @@
 
 ::: definition
 + 如果 $v\in V$ 满足 $(v, v)>0$，我们就称 $v$ 是**实的**。
-+ 如果 $u,v\in V$ 满足 $(u,v)\leq 0$ 且 $\inn$ 限制在 $u,v$ 张成的二维子空间上**不是正定**的，就称 $u,v$ 是**分离**的 (disjoint)。
++ 如果 $u,v\in V$ 满足 $(u,v)\leq 0$ 且 $u,v$ 张成的二维子空间 $\span\{u,v\}$ **不是正定**的，就称 $u,v$ 是**分离**的 (disjoint)。
+:::
+
+:::note
+在 $\inn$ 是 Lorentzian 内积时，$v$ 是实的等价于 $v$ 是 space-like 的。
 :::
 
 ::: {.lemma #lemma-uv}
@@ -20,8 +24,7 @@
 
 情形 1 可以取 $V$ 的一组正交基包含两个向量 $u,v$ 满足 $(u, u)=-1$ 和 $(v,v)=0$。情形 2 可以取 $V$ 的一组正交基包含三个向量 $x,y,z$ 满足 $(x,x)=1$ 和 $(y, y)=(z,z)=-1$，然后取 $u=z$ 和 $v=x+y$，则 $u,v$ 正交且 $(u,u)=-1,\,(v,v)=0$。$\blacksquare$
 
-
-::: {.theorem #thm-level-1}
+::: {.theorem #level-1}
 @Maxwell82
 
 如果 $\Gamma$ 的 level 是 1，则 $\Gamma$ 是双曲的。所有的基本权都不是实的并且两两分离。
@@ -31,7 +34,7 @@
 
 我们需要证明三件事情：
 
-1. 内积 $\inn$ 的符号是 $(n-1, 1)$；
+1. 内积 $\inn$ 的符号是 $(n-1, 1, 0)$；
 2. 任何基本权 $\omega_s$ 满足 $(\omega_s,\omega_s)\leq0$；
 3. 任何两个基本权 $\omega_s,\omega_t\in\Delta^\ast$ 满足 $(\omega_s,\omega_t)\leq0$ 并且它们生成的二维子空间 $\span\{\omega_i,\omega_j\}$ 不是正定的。
 
@@ -95,17 +98,17 @@ $$0=(v, v) = (v_+,v_+) + (v_-,v_-) + 2(v_+,v_-).$$
 
 至此定理得证。$\blacksquare$
 
-::: {.corollary #level-1}
+::: {.corollary #level-1-tits}
 若 $W$ 的 level 为 1，则 Tits 锥的闭包 $\cl{\tc}$ 等于 $\Q_+$ 或者 $\Q_-$ 之一（加上原点）。
 :::
 
 **证明**：由于 level 1 的群是双曲的，根据 @Pre:tits-closure，$\cl{\tc}$ 包含 $\Q$ 的一个连通分支，不妨设为 $\cl{\tc}\supset\Q_+$。还要再证明反向的包含关系。为此只要证明 $\cl{\tc}\subset\Q$ 和 $\cl{\tc}\cap\Q_-=\emptyset$。
 
-根据 @Pre:thm-level-1，所有的基本权 $\{\omega_s\}$ 都不是实的且两两分离，所以它们都属于 $\Q$。对任意 $x\in\barfd$，设 $x=\sum_{s\in S}c_s\omega_s$，其中每个 $c_s\geq0$，则
+根据 @Pre:level-1，所有的基本权 $\{\omega_s\}$ 都不是实的且两两分离，所以它们都属于 $\Q$。对任意 $x\in\barfd$，设 $x=\sum_{s\in S}c_s\omega_s$，其中每个 $c_s\geq0$，则
 $$(x,x)=\sum_{s,t\in S}c_sc_t\underbrace{(\omega_s,\omega_t)}_{\leq0}\leq0.$$
 即 $\barfd\subset\Q$。$W$ 作为正交变换群保持 $\Q$ 不变，所以 $\tc=\bigcup\limits_{w\in W}w\barfd\subset\Q$，从而 $\cl{\tc}\subset\Q$。
 
-还需要说明 $\cl{\tc}\cap\Q_-=\emptyset$。首先注意到 $\tc^\ast$ 必然包含某个 time-like 的向量 $(z,z)<0$。否则根据 @Pre:dual-cone-non-trivial $\tc^\ast$ 中的非零向量都是 light-like 的。由于 $\inn$ 是双曲的，$\tc^\ast$ 不能包含两个线性无关的 light-like 的向量，所以 $\tc^\ast$ 由一个 light-like 的向量 $\delta$ 生成。取对偶得到 $\cl{\tc}=\{v\in V\mid (v,\delta)\geq0\}$，这是一个半空间，显然包含 space-like 的向量，这与 $\cl{\tc}\subset\Q$ 矛盾。所以我们确实可以取 $z\in\tc^\ast$ 满足 $(z,z)<0$。显然 $z\in\Q_-$，于是对任何 $x\in\Q_-$ 有 $(z,x)<0$，而 $(z,\cl{\tc})\geq0$，从而确实有 $\cl{\tc}\cap\Q_-=\emptyset$。$\blacksquare$
+还需要说明 $\cl{\tc}\cap\Q_-=\emptyset$。首先注意到 $\tc^\ast$ 必然包含某个 time-like 的向量 $(z,z)<0$。否则根据 @Pre:dual-cone-nonspace $\tc^\ast$ 中的非零向量都是 light-like 的。由于 $\inn$ 是双曲的，$\tc^\ast$ 不能包含两个线性无关的 light-like 的向量（否则它们的正线性组合会得到 time-like 的向量），所以 $\tc^\ast$ 由一个 light-like 的向量 $\delta$ 生成。取对偶得到 $\cl{\tc}=\{v\in V\mid (v,\delta)\geq0\}$，这是一个半空间，显然包含 space-like 的向量，这与 $\cl{\tc}\subset\Q$ 矛盾。所以我们确实可以取 $z\in\tc^\ast$ 满足 $(z,z)<0$。显然 $z\in\Q_-$，于是对任何 $x\in\Q_-$ 有 $(z,x)<0$，而 $(z,\cl{\tc})\geq0$，从而 $\cl{\tc}\cap\Q_-=\emptyset$。$\blacksquare$
 
 下面的结论来自 @Maxwell89。
 
@@ -121,6 +124,8 @@ $$(x,x)=\sum_{s,t\in S}c_sc_t\underbrace{(\omega_s,\omega_t)}_{\leq0}\leq0.$$
 
 :::note
 注意这里没有要求 $W$ 必须是双曲的，也没有限制 $W$ 的 level。
+
+此外 $\bigcup_{w\in W_I}wp$ 是一个无限集，$\cone{\bigcup_{w\in W_I}}$ 未必是闭的，因此闭包记号不可少。
 
 当 $W$ 的 level 是 1 时，若 $\omega_s$ 是一个位于双曲空间边界上的理想顶点，则命题的条件都满足。这时经过 $\omega_s$ 的那些镜面生成的椭圆子群会把基本区域无限压缩到 $\omega_s$ 附近，如下图所示：
 ![](images/ideal-vertex.jpg){width=300}
@@ -153,9 +158,9 @@ s_\beta(p)&=p - 2(p,\beta)\beta\\
 &=p-2(p,\alpha_t)\alpha_t- 2a(p, \omega_s)\alpha_t - c\omega_s\\
 &=t(p) - 2a(p, \omega_s)\alpha_t - c\omega_s.
 \end{align*}$$
-其中 $c=2(p,\alpha_t+a\omega_s)a$ 是一个实数。于是
-$$(w_1-1)p=ts_\beta(p)-p =t^2(p) - 2a(p, \omega_s)t(\alpha_t) - ct(\omega_s)=2a(p,\omega_s)\alpha_t - c\omega_s.\label{eq:wp1}\tag{1}$$
-其中我们利用了 $t(\omega_s)=\omega_s$。继续由于 $(w_1-1)\omega_s=0$，所以
+其中 $c=2(p,\alpha_t+a\omega_s)a$ 是实数。于是
+$$(w_1-1)p=ts_\beta(p)-p=-2a(p, \omega_s)t(\alpha_t) - ct(\omega_s)=2a(p,\omega_s)\alpha_t - c\omega_s.\label{eq:wp1}\tag{1}$$
+其中我们利用了 $t(\alpha_t)=-\alpha_t$ 和 $t(\omega_s)=\omega_s$。继续由于 $(w_1-1)\omega_s=0$，所以
 $$(w_1-1)^2p = 2a(p,\omega_s)(w_1-1)\alpha_t.\label{eq:wp2}\tag{2}$$
 对于 $(w_1-1)\alpha_t$，我们可以在 $(\ref{eq:wp1})$ 式中取 $p=\alpha_t$，得到
 $$(w_1-1)\alpha_t=2a\underbrace{(\alpha_t,\omega_s)}_{=0}\alpha_t -c\omega_s=-c\omega_s= -2(\alpha_t,\alpha_t+a\omega_s)a\omega_s=-2a\omega_s.$$

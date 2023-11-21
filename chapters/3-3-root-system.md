@@ -8,11 +8,11 @@ $$\lambda = \sum_{s\in S}c_s\alpha_s,\quad c_s\in\mathbb{R}.$$
 如果上面的所有系数 $c_s$ 都非负，就称 $\lambda$ 是一个**正根**；若所有系数 $c_s$ 都非正，就称 $\lambda$ 是一个**负根**。正根和负根组成的集合分别记作 $\Phi^+$ 和 $\Phi^-$，显然 $\Phi^+\cap\Phi^-=\emptyset$。
 :::
 
-这里有个问题：每个根都必然是正根或者负根吗？即是否有 $\Phi=\Phi^+\cup\Phi^-$ 成立？这并不显然，但其实答案是肯定的，为此我们需要一个关键引理。这个引理的证明有点长，但是它非常非常重要，Coxeter 群的几乎所有性质的证明多少都会用到它。在引入它之前，我们需要做一点小小的准备。
+这里有个问题：每个根都必然是正根或者负根吗？即是否有 $\Phi=\Phi^+\cup\Phi^-$ 成立？这并不显然，但其实答案是肯定的，为此我们需要一个关键引理。这个引理的证明有点长，但是它非常重要，Coxeter 群的几乎所有性质的证明多少都会用到它。在引入它之前，我们需要做一点小小的准备。
 
 设 $I\subseteq S$ 是 $S$ 的子集，$I$ 中的生成元在 $(W,S)$ 中生成一个子群 $W_I \leqslant (W,S)$，$W_I$ 叫做**标准椭圆子群**。记 $l_I(\cdot)$ 是 $W_I$ 上的长度函数，则显然对任何 $w\in W_I$ 有 $l(w)\leq l_I(w)$ 成立（因为 $W_I$ 中的任何既约表示是 $W$ 中的未必既约的表示）。我们后面会看到 $l_I=l\mid_{W_I}$，但现在我们暂时还证明不了它。
 
-现在我们给出本文最重要的一个引理，不夸张地说，几乎所有 Coxeter 群性质的证明中多少都要用到它。
+现在我们给出一个重要的引理，不夸张地说，几乎所有 Coxeter 群性质的证明中多少都要用到它。
 
 ::: {.lemma #key-lemma}
 设 $s\in S,\, w\in W$，则
@@ -75,9 +75,13 @@ $$1,\ t,\ st,\ \ldots,\ \overbrace{\ast\cdots\ast t}^{\leq m-1},$$
 $$\overbrace{sts\cdots}^{m_{s,t}}=\overbrace{tst\cdots}^{m_{s,t}}$$
 $v_I$ 会等于以 $s$ 结尾的另一个既约表示，与 $v_I$ 的任何既约表示不能以 $s$ 结尾矛盾。
 
+  ![](images/finite2d.svg){width=400}
+
 2. $m=m_{s,t}=\infty$ 时，仍然记 $\cosh\theta=a_{s,t},\,\theta\geq0$，则
 $$\alpha_s\xrightarrow{\ t\ }\shthe{}\alpha_s+\shthe{2}\alpha_t\xrightarrow{\ s\ }\shthe{3}\alpha_s+\shthe{2}\alpha_t\xrightarrow{\ t\ }\cdots$$
 每一项都是 $\alpha_s,\alpha_t$ 的非负线性组合。
+
+  ![](images/hyperbolic2d.svg){width=400}
 
 必要性的证明：
 

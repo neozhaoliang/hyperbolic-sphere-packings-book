@@ -8,7 +8,7 @@ level 等于 2 的群都是双曲的，所有的基本权两两分离。$\omega_
 
 **证明**：我们先来证明 $\Gamma$ 是双曲的。
 
-如果 $\Gamma$ 是不连通的，则 $\Gamma$ 必须是一个 level 为 1 的子图和一个独立顶点的并，由于 @Pre:thm-level-1 已经证明了 level 1 的群是双曲的，再加上一个独立顶点仍然是双曲的，所以 $\Gamma$ 是双曲的。于是我们不妨假设 $\Gamma$ 是连通的。
+如果 $\Gamma$ 是不连通的，则 $\Gamma$ 必须是一个 level 为 1 的子图和一个独立顶点的并，由于 @Pre:level-1 已经证明了 level 1 的群是双曲的，再加上一个独立顶点仍然是双曲的，所以 $\Gamma$ 是双曲的。于是我们不妨假设 $\Gamma$ 是连通的。
 
 再针对 $\Gamma$ 的顶点个数是否大于 3 分别处理。在 $\Gamma$ 只包含 3 个顶点的情形，$\Gamma$ 的 level 是 2 说明其必然有一条边的 Vinberg 标号小于 -1。不妨设 $\inn$ 的 Gram 矩阵形如
 $$\begin{pmatrix}1&a&b\\a&1&c\\b&c&1\end{pmatrix}.$$
@@ -70,14 +70,14 @@ $$\begin{align*}
 $$0=(\omega_s,\omega_s)(\alpha_s,\alpha_k) +\sum_{t\ne s,k} (\omega_s,\omega_t)(\alpha_t,\alpha_k) + (\omega_s,\omega_k).$$
 上面的和项前两个都非负，最后一个大于 0，矛盾。所以所有的 $\{(\omega_s,\omega_t)\}_{t\ne s}$ 都非正。
 
-+ 如果 $(\omega_s,\omega_s)>0$，则其正交补 $U=\omega_s^\bot={\rm span}\{\alpha_t,\,t\ne s\}$ 是双曲的，即 $\minus{\Gamma}{s}$ 的 level 是 1。考虑 $\alpha_s$ 在 $U$ 上的正交投影 $\alpha_s'=\alpha_s-\omega_s/(\omega_s,\omega_s)$。$\alpha_s'$ 满足对任何 $t\ne s$ 有 $(\alpha_s',\alpha_t)\leq0$，从而 $-\alpha_s'$ 属于 $\minus{\Gamma}{s}$ 的基本区域的闭包 $\barfd_s$，而 @Pre:thm-level-1 和 @Pre:level-1 已经证明了 $\minus{\Gamma}{s}$ 的 Tits 锥中的点都是 time-like 或者 light-like 的，从而 $(\alpha_s',\alpha_s')= 1-(\omega_s,\omega_s)^{-1}\leq0$，即 $0<(\omega_s,\omega_s)\leq1$。又由于 @Pre:level-1 证明了 $\minus{\Gamma}{s}$ 作为不可约的 level 1 的图，其基本区域的闭包 $\barfd_s$ 属于 $\Q$ 的同一个连通分支（此 $\Q$ 是 ${\rm span}\{\alpha_t,t\ne s\}$ 中 $(v,v)\leq0$ 构成的集合），从而 $-\alpha_s'$ 和 $\{\omega_t,t\ne s\}$ 都属于此分支，所以对任何 $t\ne s$ 有 $(-\alpha_s',\omega_t)=(\omega_s,\omega_t)/(\omega_s,\omega_s)\leq0$，即 $(\omega_s,\omega_t)\leq 0$，于是所有的 $\{(\omega_s,\omega_t)\}_{t\ne s}$ 都非正。
++ 如果 $(\omega_s,\omega_s)>0$，则其正交补 $U=\omega_s^\bot={\rm span}\{\alpha_t,\,t\ne s\}$ 是双曲的，即 $\minus{\Gamma}{s}$ 的 level 是 1。考虑 $\alpha_s$ 在 $U$ 上的正交投影 $\alpha_s'=\alpha_s-\omega_s/(\omega_s,\omega_s)$。$\alpha_s'$ 满足对任何 $t\ne s$ 有 $(\alpha_s',\alpha_t)\leq0$，从而 $-\alpha_s'$ 属于 $\minus{\Gamma}{s}$ 的基本区域的闭包 $\barfd_s=\cone{\{\omega_t,t\ne s\}}\subset U$。而根据 @Pre:level-1-tits，$\barfd_s$ 中的点都是 time-like 或者 light-like 的，并且属于 $\Q$ 的同一个连通分支（此 $\Q$ 是 $U$ 中 $(v,v)\leq0$ 构成的集合），从而 $(\alpha_s',\alpha_s')= 1-(\omega_s,\omega_s)^{-1}\leq0$，即 $0<(\omega_s,\omega_s)\leq1$，以及对任何 $t\ne s$ 有 $(-\alpha_s',\omega_t)=(\omega_s,\omega_t)/(\omega_s,\omega_s)\leq0$，即 $(\omega_s,\omega_t)\leq 0$，于是所有的 $\{(\omega_s,\omega_t)\}_{t\ne s}$ 都非正。
 
 总之我们证明了不论 $(\omega_s,\omega_s)$ 的符号如何，它与其它的基本权的内积 $(\omega_s, \omega_t)$ 都非正。
 
 又因为对任何 $s,t$，$\minus{\Gamma}{s,t}$ 是有限或者仿射的，所以其正交补，即 $\{\omega_s,\omega_t\}$ 张成的二维子空间不是正定的，从而 $\{\omega_s\}$ 之间是两两分离的。
 
 :::note
-我们需要考虑 $\alpha_s$ 的投影 $\alpha_s'$ 是因为 $\alpha_s$ 不属于 ${\rm span}\{\alpha_t,\,t\ne s\}$，无法直接根据 $(\alpha_s,\alpha_t)\leq0$ 得出 $\alpha_s$ 属于 $\minus{\Gamma}{s}$ 的基本区域的闭包。
+我们需要考虑 $\alpha_s$ 的投影 $\alpha_s'$ 是因为 $\alpha_s$ 不属于 ${\rm span}\{\alpha_t,\,t\ne s\}$，无法直接根据 $(\alpha_s,\alpha_t)\leq0$ 得出 $-\alpha_s$ 属于 $\minus{\Gamma}{s}$ 的基本区域的闭包。
 :::
 
 最后我们来补上断言的证明。

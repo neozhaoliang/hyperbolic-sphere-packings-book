@@ -1,4 +1,4 @@
-# Boyd-Maxwell 球堆
+# 双曲球堆
 
 ::: definition
 如果一个非空集合 $\P\subset V$ 满足下列条件，我们就称 $\P$ 是一个**球堆**：
@@ -108,6 +108,6 @@ $$\omega_s\in\cl{\cone{\bigcup_{w\in W_I}w(\omega_t)}}\subset\tcr.$$
 若 $W$ 是双曲的，则 $\myhat{\Omega_r}$ 是非平凡的球堆当且仅当 $\Gamma$ 的 level 是 2，这时 $\myhat{\Omega_r}$ 还是极大球堆。
 :::
 
-**证明**：若 $\Gamma$ 的 level 是 2，根据 @Pre:level-2，$\Omega_r$ 中的元素两两分离，将其单位化后得到的 $\myhat{\Omega_r}$ 仍然两两分离，所以 $\myhat{\Omega_r}$ 的元素两两之间的内积 $\leq -1$，从而 $\myhat{\Omega_r}$ 确实给出一个球堆。如果存在某个球与任何 $\myhat{\Omega_r}$ 中的球都不相交或者相切的话，设这个球对应的单位向量是 $k\in\S$，则根据 @Pre:suff-for-disjoint，有 $(k,\myhat{\omega})\leq -1$ 对任何 $\myhat{\omega}\in\myhat{\Omega_r}$ 成立，从而 $(k,\omega)<0$ 对任何 $\omega\in\Omega_r$ 成立，从而 $(k,y)\leq0$ 对任何 $y\in\tcr$ 成立。根据 @Pre:real-cone-closure，$\tcr=\cl{\tc}$，这意味着 $(k,y)\leq0$ 对任何 $y\in\tc$ 成立，即 $-k\in\tc^\ast$。根据 @Pre:dual-cone-nonspace $(k,k)=(-k,-k)\leq0$，矛盾。这就证明了 level 2 时 $\Omega_r$ 是极大堆积。
+**证明**：若 $\Gamma$ 的 level 是 2，根据 @Pre:level-2，$\Omega_r$ 中的元素两两分离，将其单位化后得到的 $\myhat{\Omega_r}$ 仍然两两分离，所以 $\myhat{\Omega_r}$ 的元素两两之间的内积 $\leq -1$，从而 $\myhat{\Omega_r}$ 确实给出一个球堆。如果存在某个球与任何 $\myhat{\Omega_r}$ 中的球都不相交或者相切的话，设这个球对应的单位向量是 $k\in\S$，则根据 @Pre:suff-for-disjoint，有 $(k,\myhat{\omega})\leq -1$ 对任何 $\myhat{\omega}\in\myhat{\Omega_r}$ 成立，从而 $(k,\omega)<0$ 对任何 $\omega\in\Omega_r$ 成立，从而 $(k,y)\leq0$ 对任何 $y\in\tcr=\cone{\Omega_r}$ 成立。根据 @Pre:real-cone-closure，$\tcr=\cl{\tc}$，这意味着 $(k,y)\leq0$ 对任何 $y\in\tc$ 成立，即 $-k\in\tc^\ast$。根据 @Pre:dual-cone-nonspace $(k,k)=(-k,-k)\leq0$，矛盾。这就证明了 level 2 时 $\Omega_r$ 是极大堆积。
 
-反之若 $W$ 是双曲的并且 $\myhat{\Omega_r}$ 是一个非平凡球堆，$W$ 的 level 大于 1，所有的实权之间两两分离。然而任何非实权和其它任何权张成的子空间当然不可能是正定的，所以对任何两个基本权生成的二维子空间 $\span{\omega_i,\omega_j}$ 是 time-like 或者 light-like 的，从而 $\Gamma-\{i,j\}$ 是正定或者仿射的，所以 $\Gamma$ 的 level 只能是 2。$\blacksquare$
+反之若 $W$ 是双曲的并且 $\myhat{\Omega_r}$ 是一个非平凡球堆，$W$ 的 level 大于 1，所有的实权之间两两分离。然而任何非实权和其它任何权张成的子空间当然不可能是正定的，所以对任何两个基本权生成的二维子空间 $\span\{\omega_i,\omega_j\}$ 是 time-like 或者 light-like 的，从而 $\minus{\Gamma}{i,j}$ 是正定或者仿射的，所以 $\Gamma$ 的 level 只能是 2。$\blacksquare$
