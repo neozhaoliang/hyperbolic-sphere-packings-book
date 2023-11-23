@@ -1519,8 +1519,11 @@ class="math inline">\(l_I=l\mid_{W_I}\)</span>，但现在我们暂时还证明�
 群性质的证明中多少都要用到它。</p>
 <div id="key-lemma" class="statement lemma plain">
 <p><span class="statement-heading"><span class="statement-label">引理
-6</span>.</span><span class="statement-spah"> </span>设 <span
-class="math inline">\(s\in S,\, w\in W\)</span>，则</p>
+6</span> <span class="statement-info">(<span class="citation"
+data-cites="Humphreys90">(<a href="#ref-Humphreys90"
+role="doc-biblioref">Humphreys, J. 1990, sec.
+5.4</a>)</span>)</span>.</span><span class="statement-spah"> </span>设
+<span class="math inline">\(s\in S,\, w\in W\)</span>，则</p>
 <ol type="1">
 <li><span class="math inline">\(l(ws) &gt; l(w)\)</span> 当且仅当 <span
 class="math inline">\(w\alpha_s\in\Phi^+\)</span>。</li>
@@ -1561,11 +1564,14 @@ class="math inline">\(l(v)\leq l(wt)=l(w)-1\)</span>。我们断言对任何
 class="math inline">\(l(vu)&gt;l(v)\)</span>。若不然，则 <span
 class="math inline">\(l(vu)=l(v)-1\)</span>，于是 <span
 class="math display">\[\begin{align*}
-l(w)&amp;=l(vu\cdot uv_I)\leq l(vu) + l(uv_I) = (l(v) -1) + l(uv_I)\\
-&amp;\leq (l(v) -1) + l_I(uv_I)\\
+l(w)&amp;=l(vu\cdot uv_I)\\
+&amp;\leq l(vu) + l(uv_I)\\
+&amp; \leq l(vu) + l_I(uv_I)\\
+&amp; = (l(v) -1) + l_I(uv_I)\\
 &amp;\leq (l(v) -1) + (l_I(v_I) + 1)\\
 &amp; = l(v) + l_I(v_I)=l(w).
-\end{align*}\]</span> 于是所有的不等号都是等式，从而 <span
+\end{align*}\]</span> 于是所有的不等号都是等式，特别 <span
+class="math inline">\(l(w)=l(vu)+l_I(uv_I)\)</span>，从而 <span
 class="math inline">\((vu,uv_I)\in A\)</span>，但这与 <span
 class="math inline">\((v,v_I)\)</span> 的选择矛盾。所以不论 <span
 class="math inline">\(u=s\)</span> 或是 <span
@@ -1586,9 +1592,9 @@ b\alpha_t)=av\alpha_s + bv\alpha_t\in\Phi^+.\]</span>
 <p>首先注意到 <span class="math inline">\(v_I\in W_I\)</span>
 的任何既约表示都是 <span class="math inline">\(s,t\)</span>
 的交错乘积，而且不能以 <span class="math inline">\(s\)</span> 结尾，否则
-<span class="math inline">\(l_I(v_Is)=l_I(v_I)-1\)</span>，从而 <span
+<span class="math inline">\(l_I(v_Is)&lt;l_I(v_I)\)</span>，从而 <span
 class="math display">\[l(ws)=l(vv_Is)\leq l(v) + l(v_Is)\leq
-l(v)+l_I(v_Is)=l(v)+l_I(v_I)-1=l(w)-1.\]</span> 这与 <span
+l(v)+l_I(v_Is)&lt;l(v)+l_I(v_I)=l(w).\]</span> 这与 <span
 class="math inline">\(l(ws) &gt; l(w)\)</span> 矛盾！</p>
 <p>于是 <span class="math inline">\(v_I\)</span> 形如 <span
 class="math inline">\(v_I=st\cdots t\)</span> 或者 <span
@@ -1723,25 +1729,30 @@ class="math inline">\(|N(w)|\)</span> 也满足同样的递推关系即可：</p
 |N(ws)| =\begin{cases}|N(w)|+1,&amp; w\alpha_s\in\Phi^+,\\
 |N(w)|-1,&amp; w\alpha_s\in\Phi^-.\end{cases}
 \]</span></p>
-<p>实际上对任何 <span class="math inline">\(\lambda\in\Phi^+\)</span> 且
-<span class="math inline">\(\lambda\ne\alpha_s\)</span>，根据 <a
+<p>实际上我们将证明</p>
+<p><span class="math display">\[
+N(ws)=
+\begin{cases}
+s\cdot N(w)\cup\{\alpha_s\},&amp; w\alpha_s\in\Phi^+,\\
+s(N(w)\setminus\{\alpha_s\}),&amp; w\alpha_s\in\Phi^-.
+\end{cases}
+\]</span> 对任何 <span class="math inline">\(\lambda\in\Phi^+\)</span>
+且 <span class="math inline">\(\lambda\ne\alpha_s\)</span>，根据 <a
 href="#simple-ref" title="推论 9">推论 9</a> <span
 class="math inline">\(s\lambda\)</span> 也是正根，所以由恒等式 <span
 class="math display">\[(ws)\lambda\in\Phi^- \Leftrightarrow
-w(s\lambda)\in\Phi^-.\]</span> 可得当 <span
-class="math inline">\(\lambda\in\Phi^+-\{\alpha_s\}\)</span> 时有 <span
-class="math display">\[\lambda\in N(ws)\Leftrightarrow s\lambda\in
-N(w),\]</span> 即 <span class="math inline">\(\lambda\leftrightarrow
+w(s\lambda)\in\Phi^-.\]</span> 可得 <span
+class="math inline">\(\lambda\in N(ws)\Leftrightarrow s\lambda\in
+N(w)\)</span>，即 <span class="math inline">\(\lambda\leftrightarrow
 s\lambda\)</span> 给出了 <span
-class="math inline">\(N(ws)-\{\alpha_s\}\)</span> 和 <span
-class="math inline">\(N(w)-\{\alpha_s\}\)</span>
+class="math inline">\(N(ws)\setminus\{\alpha_s\}\)</span> 和 <span
+class="math inline">\(N(w)\setminus\{\alpha_s\}\)</span>
 的一一对应。除此之外，<span class="math inline">\(\alpha_s\)</span>
 必然恰好属于 <span class="math inline">\(N(ws)\)</span> 和 <span
 class="math inline">\(N(w)\)</span> 之一：</p>
 <ul>
 <li>当 <span class="math inline">\(l(ws) &gt; l(w)\)</span> 时 <span
-class="math inline">\(w\alpha_s\in\Phi^+\Rightarrow
-ws\alpha_s\in\Phi^-\Rightarrow\alpha_s\in
+class="math inline">\(w\alpha_s\in\Phi^+\Rightarrow\alpha_s\in
 N(ws)\)</span>，这对应第一条递推关系；</li>
 <li>当 <span class="math inline">\(l(ws)&lt;l(w)\)</span> 时 <span
 class="math inline">\(w\alpha_s\in\Phi^-\Rightarrow\alpha_s\in
@@ -1847,43 +1858,9 @@ class="math inline">\(\alpha_s,\,s\notin I\)</span> 的系数大于 0，从而
 <span class="math inline">\(w\lambda\)</span> 关于这一项的系数也大于
 0，所以 <span class="math inline">\(w\lambda\)</span>
 不可能是负根。<span class="math inline">\(\blacksquare\)</span></p>
-<div id="wv-minus-v" class="statement corollary plain">
-<p><span class="statement-heading"><span class="statement-label">推论
-15</span>.</span><span class="statement-spah"> </span>设 <span
-class="math inline">\(w=s_{\alpha_1}s_{\alpha_2}\cdots
-s_{\alpha_n}\)</span>，则对任何 <span class="math inline">\(v\in
-V\)</span> 有 <span class="math display">\[wv = v -
-\sum_{i=1}^n2(v,\alpha_i)\beta_i.\]</span> 其中 <span
-class="math inline">\(\beta_i=s_{\alpha_1}\cdots
-s_{\alpha_{i-1}}(\alpha_i)\)</span> 是正根。（<span
-class="math inline">\(i=1\)</span> 时 <span
-class="math inline">\(\beta_1\)</span> 理解为 <span
-class="math inline">\(\alpha_1\)</span>）</p>
-</div>
-<p><strong>证明</strong>：对 <span class="math inline">\(n\)</span>
-归纳，<span class="math inline">\(n=1\)</span> 时 <span
-class="math inline">\(w=s_{\alpha_1}\)</span>，<span
-class="math inline">\(\beta_1=\alpha_1\)</span>，所以 <span
-class="math display">\[wv=s_{\alpha_1}v=v-2(v,\alpha_1)\alpha_1=v-2(v,\alpha_1)\beta_1.\]</span>
-结论成立。下设结论在小于 <span class="math inline">\(n\)</span>
-时都成立。对 <span class="math inline">\(w&#39;=s_{\alpha_2}\cdots
-s_{\alpha_n}\)</span> 应用归纳假设，有 <span
-class="math display">\[w&#39;v=v -
-\sum_{i=2}^n2(v,\alpha_i)\beta_i&#39;.\]</span> 其中 <span
-class="math inline">\(\beta_i&#39;=s_{\alpha_2}\cdots
-s_{\alpha_{i-1}}(\alpha_i)\)</span>，并且由归纳假设 <span
-class="math inline">\(\beta_i&#39;\)</span> 是正根。 于是 <span
-class="math display">\[wv=s_{\alpha_1}w&#39;v=s_{\alpha_1}v-\sum_{i=2}^n2(v,\alpha_i)s_{\alpha_1}(\beta_i&#39;)=\sum_{i=1}^n2(v,\alpha_i)\beta_i.\]</span>
-注意到每个 <span class="math inline">\(\beta_i&#39;\)</span> 是 <span
-class="math inline">\(\{\alpha_i,2\leq i\leq i\}\)</span>
-的线性组合，它是正根说明 <span
-class="math inline">\(\beta_i&#39;\ne\alpha_1\)</span>，从而 <span
-class="math inline">\(s_{\alpha_1}(\beta_i&#39;)=\beta_i\)</span>
-仍然是正根。于是结论对 <span class="math inline">\(n\)</span>
-也成立。<span class="math inline">\(\blacksquare\)</span></p>
 <div id="lI-equals-l" class="statement corollary plain">
 <p><span class="statement-heading"><span class="statement-label">推论
-16</span>.</span><span class="statement-spah"> </span>设 <span
+15</span>.</span><span class="statement-spah"> </span>设 <span
 class="math inline">\(w\in W_I\)</span>，则对 <span
 class="math inline">\(w\)</span> 的任何既约表示 <span
 class="math inline">\(w=s_{i_1}\cdots s_{i_r}\)</span> 都有 <span
@@ -2038,7 +2015,7 @@ class="math display">\[\mathrm{cone}(X) = \left\{\sum_{i=1}^n c_ix_i,\,
 c_i\geq0\right\}.\]</span></p>
 <div id="fund-cone" class="statement proposition plain">
 <p><span class="statement-heading"><span class="statement-label">命题
-17</span>.</span><span class="statement-spah"> </span><span
+16</span>.</span><span class="statement-spah"> </span><span
 class="math inline">\(\overline{\mathcal{D}}=\mathrm{cone}(\Delta^\ast)\)</span>。</p>
 </div>
 <p>证明：对 <span class="math inline">\(x\in V^\ast\)</span>，设 <span
@@ -2065,7 +2042,7 @@ V^\ast\mid\mathrm{Neg}(x)=\emptyset\}\)</span>。</p>
 <p>我们来证明：</p>
 <div id="tits-neg-finite" class="statement theorem plain">
 <p><span class="statement-heading"><span class="statement-label">定理
-18</span>.</span><span class="statement-spah"> </span>Tits 锥 <span
+17</span>.</span><span class="statement-spah"> </span>Tits 锥 <span
 class="math inline">\(\mathcal{C}= \{x\in V^\ast \mid |\mathrm{Neg}(x)|
 &lt; \infty\}\)</span>。</p>
 </div>
@@ -2154,7 +2131,7 @@ class="math inline">\(\mathrm{Neg}(y)=\emptyset\)</span>，从而 <span
 class="math inline">\(y\in\overline{\mathcal{D}}\)</span>，这就证明了结论。</p>
 <div id="tits-convex" class="statement corollary plain">
 <p><span class="statement-heading"><span class="statement-label">推论
-19</span>.</span><span class="statement-spah"> </span>Tits 锥 <span
+18</span>.</span><span class="statement-spah"> </span>Tits 锥 <span
 class="math inline">\(\mathcal{C}\)</span> 是凸锥。</p>
 </div>
 <p><strong>证明</strong>：设 <span class="math inline">\(x,
@@ -2163,14 +2140,14 @@ class="math inline">\(\alpha,\beta\geq0\)</span>，我们需要证明 <span
 class="math inline">\(z=\alpha x+\beta y\)</span> 也属于 <span
 class="math inline">\(\mathcal{C}\)</span>。但是 <span
 class="math display">\[\mathrm{Neg}(z)\subseteq\mathrm{Neg}(x)\cup\mathrm{Neg}(y),\]</span>
-根据 <a href="#tits-neg-finite" title="定理 18">定理 18</a> <span
+根据 <a href="#tits-neg-finite" title="定理 17">定理 17</a> <span
 class="math inline">\(\mathrm{Neg}(x),\,\mathrm{Neg}(y)\)</span>
 都是有限集，所以 <span class="math inline">\(\mathrm{Neg}(z)\)</span>
 也有限，从而 <span class="math inline">\(z\in\mathcal{C}\)</span>，即
 <span class="math inline">\(\mathcal{C}\)</span> 是凸锥。</p>
 <div class="statement corollary plain">
 <p><span class="statement-heading"><span class="statement-label">推论
-20</span>.</span><span class="statement-spah"> </span><span
+19</span>.</span><span class="statement-spah"> </span><span
 class="math inline">\(\mathcal{C}=\mathrm{cone}(\Omega)\)</span>。</p>
 </div>
 <p><strong>证明</strong>：由于 <span
@@ -2179,13 +2156,13 @@ class="math inline">\(\mathrm{cone}(\Omega)\supset\mathrm{cone}(\Delta^\ast)=\ov
 class="math inline">\(W-\)</span> 不变的，所以它包含 <span
 class="math inline">\(\bigcup_{w\in
 W}w\overline{\mathcal{D}}=\mathcal{C}\)</span>。</p>
-<p>另一方面根据 <a href="#fund-cone" title="命题 17">命题 17</a>，<span
+<p>另一方面根据 <a href="#fund-cone" title="命题 16">命题 16</a>，<span
 class="math inline">\(\mathcal{C}\supset\overline{\mathcal{D}}\supset\Delta^\ast\)</span>，以及
 <span class="math inline">\(\mathcal{C}\)</span> 是 <span
 class="math inline">\(W-\)</span> 不变的，所以 <span
 class="math inline">\(\mathcal{C}\supset\bigcup_{w\in
 W}w\Delta^\ast=\Omega\)</span>。而 <a href="#tits-convex"
-title="推论 19">推论 19</a> 证明了 <span
+title="推论 18">推论 18</a> 证明了 <span
 class="math inline">\(\mathcal{C}\)</span> 是凸锥，所以 <span
 class="math inline">\(\mathcal{C}\supset\mathrm{cone}(\Omega)\)</span>。<span
 class="math inline">\(\blacksquare\)</span></p>
@@ -2201,7 +2178,7 @@ class="math inline">\(W_J\)</span> 对应的是 <span
 class="math inline">\(J\)</span> 中镜面交点的稳定化子群：</p>
 <div id="stabilizer-parabolic-subgroup" class="statement theorem plain">
 <p><span class="statement-heading"><span class="statement-label">定理
-21</span>.</span><span class="statement-spah"> </span>对任何 <span
+20</span>.</span><span class="statement-spah"> </span>对任何 <span
 class="math inline">\(x\in\overline{\mathcal{D}}\)</span>，记 <span
 class="math inline">\(J=\{s\in S \mid \langle
 \alpha_s,\,x\rangle=0\}\)</span>，则 <span class="math display">\[\{w\in
@@ -2252,7 +2229,7 @@ class="math inline">\(J\)</span>，从而定理得证。<span
 class="math inline">\(\blacksquare\)</span></p>
 <div id="tits-int-finite-stabilizer" class="statement theorem plain">
 <p><span class="statement-heading"><span class="statement-label">定理
-22</span>.</span><span class="statement-spah"> </span><span
+21</span>.</span><span class="statement-spah"> </span><span
 class="math inline">\(x\in\mathcal{C}^\circ\)</span> 当且仅当 <span
 class="math inline">\(x\)</span> 在 <span
 class="math inline">\(W\)</span> 中的稳定化子群是有限群。</p>
@@ -2269,8 +2246,8 @@ class="math inline">\(x,y\)</span> 同时属于或者同时不属于 <span
 class="math inline">\(\mathcal{C}^\circ\)</span>。所以我们只要论证 <span
 class="math inline">\(x\in\overline{\mathcal{D}}\)</span>
 的情形即可。</p>
-<p>而根据 <a href="#stabilizer-parabolic-subgroup" title="定理 21">定理
-21</a>，<span class="math inline">\(\mathrm{Stab}(x)=W_J\)</span>，其中
+<p>而根据 <a href="#stabilizer-parabolic-subgroup" title="定理 20">定理
+20</a>，<span class="math inline">\(\mathrm{Stab}(x)=W_J\)</span>，其中
 <span class="math inline">\(J=\{s\in S\mid\langle
 \alpha_s,\,x\rangle=0\}\)</span>，所以只要证明如下命题即可：</p>
 <div id="fd-finite-stabilizer"
@@ -2344,7 +2321,7 @@ S\backslash J\)</span> 上面的不等式成立，而对任何 <span
 class="math inline">\(t\in J\)</span>，由于 <span
 class="math inline">\(\sum_{w\in W_J}wy\)</span> 在 <span
 class="math inline">\(W_J\)</span> 下保持不变，所以根据 <a
-href="#stabilizer-parabolic-subgroup" title="定理 21">定理 21</a> 可得
+href="#stabilizer-parabolic-subgroup" title="定理 20">定理 20</a> 可得
 <span class="math inline">\(\langle \alpha_{t},\,\sum_{w\in
 W_J}wy\rangle=0\)</span>，从而上面的不等式变成了等式（两边都是
 0）。把这些 <span class="math inline">\(s\in S\backslash J\)</span>
@@ -2404,7 +2381,7 @@ class="math inline">\(\frac{\delta}{2|W_J|}y\in B\subset
 \mathcal{C}^\circ\)</span>，于是 <span class="math inline">\(x\in
 A+B=\cup_{p\in B}(A+p)\)</span>，这是一组开集的并，所以 <span
 class="math inline">\(x\in\mathcal{C}^\circ\)</span>，命题得证，从而 <a
-href="#tits-int-finite-stabilizer" title="定理 22">定理 22</a>
+href="#tits-int-finite-stabilizer" title="定理 21">定理 21</a>
 得证。<span class="math inline">\(\blacksquare\)</span></p>
 </section>
 <section id="tits-锥的对偶锥" class="level2" data-number="3.5">
@@ -2426,7 +2403,7 @@ class="math inline">\(V^\ast\)</span>
 class="math inline">\(C^{\ast\ast}\subset V\)</span>。</p>
 <div id="dual-dual-cone" class="statement theorem plain">
 <p><span class="statement-heading"><span class="statement-label">定理
-23</span>.</span><span class="statement-spah"> </span><span
+22</span>.</span><span class="statement-spah"> </span><span
 class="math inline">\(C^{\ast\ast} = \overline{C}\)</span>。其中 <span
 class="math inline">\(\overline{C}\)</span> 是 <span
 class="math inline">\(C\)</span> 的拓扑闭包。</p>
@@ -2495,7 +2472,7 @@ V^\ast\)</span> 所以 <span class="math inline">\(\mathcal{C}^\ast\in
 V\)</span>。我们有如下定理：</p>
 <div id="tits-cone-dual" class="statement theorem plain">
 <p><span class="statement-heading"><span class="statement-label">定理
-24</span>.</span><span class="statement-spah"> </span>Tits 锥 <span
+23</span>.</span><span class="statement-spah"> </span>Tits 锥 <span
 class="math inline">\(\mathcal{C}\)</span> 的对偶锥为 <span
 class="math inline">\(\mathcal{C}^\ast=\bigcap\limits_{w\in
 W}w(\overline{\mathrm{cone}(\Delta)})\)</span>。</p>
@@ -2524,7 +2501,7 @@ all } w \in W\}.
 \end{align}
 \]</span></p>
 <p>其中 <span class="math inline">\((\ast)\)</span> 一步正是将 <a
-href="#dual-dual-cone" title="定理 23">定理 23</a> 应用在 <span
+href="#dual-dual-cone" title="定理 22">定理 22</a> 应用在 <span
 class="math inline">\(C=\mathrm{cone}(\Delta),\,C^\ast=\overline{\mathcal{D}}\)</span>
 上得到的。<span class="math inline">\(\blacksquare\)</span></p>
 <p>虽然我们得到了上面关于 <span
@@ -2533,7 +2510,7 @@ class="math inline">\(\mathcal{C}^\ast\)</span>
 class="math inline">\(\mathcal{C}^\ast\)</span> 的一个更好的刻画。</p>
 <div id="dual-cone-dot-neg" class="statement proposition plain">
 <p><span class="statement-heading"><span class="statement-label">命题
-25</span>.</span><span class="statement-spah"> </span>如果 <span
+24</span>.</span><span class="statement-spah"> </span>如果 <span
 class="math inline">\(v\in\mathrm{cone}(\Delta)\)</span> 满足对任何
 <span class="math inline">\(\alpha_s\in\Delta\)</span> 有 <span
 class="math inline">\((v,\alpha_s)\leq0\)</span>，则 <span
@@ -2561,7 +2538,7 @@ class="math inline">\(w&#39;v\in\mathrm{cone}(\Delta)\)</span>，再结合
 class="math inline">\(w&#39;\alpha_s\in\Phi^+\subset\mathrm{cone}(\Delta)\)</span>，所以结论成立。</p>
 <div id="dual-cone-nonspace" class="statement proposition plain">
 <p><span class="statement-heading"><span class="statement-label">命题
-26</span>.</span><span class="statement-spah"> </span>对任何 <span
+25</span>.</span><span class="statement-spah"> </span>对任何 <span
 class="math inline">\(u,v\in\mathcal{C}^\ast\)</span> 有 <span
 class="math inline">\((u,v)\leq 0\)</span>。</p>
 </div>
@@ -2652,7 +2629,7 @@ role="doc-biblioref">Humphreys, J. 1990, sec.
 class="math inline">\(\mathcal{C}=V^\ast\)</span>：</p>
 <div id="finite-tits-V" class="statement theorem plain">
 <p><span class="statement-heading"><span class="statement-label">定理
-27</span>.</span><span class="statement-spah"> </span>Tits 锥 <span
+26</span>.</span><span class="statement-spah"> </span>Tits 锥 <span
 class="math inline">\(\mathcal{C}=V^\ast\)</span> 当且仅当 <span
 class="math inline">\(W\)</span> 是有限群。</p>
 </div>
@@ -2669,7 +2646,7 @@ class="math inline">\(-\mathcal{D}\in\mathcal{C}\)</span>（<span
 class="math inline">\(\mathcal{D}\)</span> 是基本区域），而对任何 <span
 class="math inline">\(x\in-\mathcal{D}\)</span> 都有 <span
 class="math inline">\(\Phi^+\subseteq \mathrm{Neg}(x)\)</span>，根据 <a
-href="#tits-neg-finite" title="定理 18">定理 18</a> <span
+href="#tits-neg-finite" title="定理 17">定理 17</a> <span
 class="math inline">\(|\Phi^+|=|\mathrm{Neg}(x)|&lt;\infty\)</span>，从而
 <span class="math inline">\(\Phi^+\)</span> 是有限集，从而 <span
 class="math inline">\(\Phi\)</span> 也是有限集。</p>
@@ -2679,14 +2656,14 @@ class="math inline">\(\Phi\)</span> 也是有限的，从而对任何 <span
 class="math inline">\(x\in V^\ast\)</span> 都有 <span
 class="math inline">\(|\mathrm{Neg}(x)|\leq
 |\Phi^+|&lt;\infty\)</span>，仍然根据 <a href="#tits-neg-finite"
-title="定理 18">定理 18</a> 有 <span
+title="定理 17">定理 17</a> 有 <span
 class="math inline">\(x\in\mathcal{C}\)</span>。<span
 class="math inline">\(\blacksquare\)</span></p>
 <p>我们还需要另一种 <span class="math inline">\(W\)</span>
 有限的刻画方式，它在后面分析仿射和双曲的情形时会用到。</p>
 <div id="phi-J-finite" class="statement proposition plain">
 <p><span class="statement-heading"><span class="statement-label">命题
-28</span>.</span><span class="statement-spah"> </span>设 <span
+27</span>.</span><span class="statement-spah"> </span>设 <span
 class="math inline">\(W\)</span> 是不可约 Coxeter 群。如果存在 <span
 class="math inline">\(J\subsetneqq S\)</span> 使得 <span
 class="math inline">\(\Phi\backslash \Phi_J\)</span> 是有限集，则 <span
@@ -2757,7 +2734,7 @@ class="math inline">\(\blacksquare\)</span></p>
 <p>这个命题有如下的推论：</p>
 <div id="tits-cone-pointed" class="statement corollary plain">
 <p><span class="statement-heading"><span class="statement-label">推论
-29</span>.</span><span class="statement-spah"> </span>如果 <span
+28</span>.</span><span class="statement-spah"> </span>如果 <span
 class="math inline">\(W\)</span> 不可约且是无限群，则 Tits 锥 <span
 class="math inline">\(\mathcal{C}\)</span> 满足 <span
 class="math inline">\(\mathcal{C}\cap-\mathcal{C}=\{0\}\)</span>，从而
@@ -2789,11 +2766,11 @@ class="math inline">\(\Phi^+\backslash
 \Phi^+_J\subset\mathrm{Neg}(w)\)</span>，从而 <span
 class="math inline">\(|\Phi^+\backslash \Phi^+_J|\leq
 |\mathrm{Neg}(w)|=l(w)&lt;\infty\)</span>，由 <a href="#phi-J-finite"
-title="命题 28">命题 28</a> <span class="math inline">\(W\)</span>
+title="命题 27">命题 27</a> <span class="math inline">\(W\)</span>
 是有限群，这与已知矛盾。</p>
 <div id="dual-cone-non-trivial" class="statement corollary plain">
 <p><span class="statement-heading"><span class="statement-label">推论
-30</span>.</span><span class="statement-spah"> </span>如果 <span
+29</span>.</span><span class="statement-spah"> </span>如果 <span
 class="math inline">\(W\)</span> 不可约且是无限群，则对偶锥 <span
 class="math inline">\(\mathcal{C}^\ast\ne\{0\}\)</span>。</p>
 </div>
@@ -2801,7 +2778,7 @@ class="math inline">\(\mathcal{C}^\ast\ne\{0\}\)</span>。</p>
 class="math inline">\(\overline{\mathcal{C}}=\mathcal{C}^{\ast\ast}=V^\ast\)</span>
 是全空间。由于一个凸集的内点和它的闭包的内点集相同，所以 <span
 class="math inline">\(\mathcal{C}=V\)</span>，这与 <a
-href="#tits-cone-pointed" title="推论 29">推论 29</a> 的结论 <span
+href="#tits-cone-pointed" title="推论 28">推论 28</a> 的结论 <span
 class="math inline">\(\mathcal{C}\)</span> 是点锥矛盾。</p>
 </section>
 <section id="仿射" class="level3" data-number="3.6.2">
@@ -2859,7 +2836,7 @@ Coxeter 图 <span class="math inline">\(\Gamma\)</span>
 中删去至少一个顶点以后，剩下的子图是有限的。</p>
 <div id="tits-cone-affine" class="statement theorem plain">
 <p><span class="statement-heading"><span class="statement-label">定理
-31</span>.</span><span class="statement-spah"> </span>在仿射的情形 <span
+30</span>.</span><span class="statement-spah"> </span>在仿射的情形 <span
 class="math inline">\(\mathcal{C}^\ast\)</span> 是一条射线：<span
 class="math inline">\(\mathcal{C}^\ast=\{c\delta\mid
 c\geq0\}\)</span>，Tits 锥是以 <span
@@ -2875,11 +2852,11 @@ class="math inline">\(W\)</span> 作用下密铺了整个上半空间</figcaptio
 </figure>
 <p><strong>证明</strong>：我们已经知道 <span
 class="math inline">\(\mathrm{rad}(V)=\mathbb{R}\delta\)</span>。根据 <a
-href="#dual-cone-non-trivial" title="推论 30">推论 30</a>，<span
+href="#dual-cone-non-trivial" title="推论 29">推论 29</a>，<span
 class="math inline">\(\mathcal{C}^\ast\)</span>
 包含非零向量，且对任何这样的非零向量 <span
 class="math inline">\(v\)</span>，根据 <a href="#dual-cone-nonspace"
-title="命题 26">命题 26</a> 有 <span
+title="命题 25">命题 25</a> 有 <span
 class="math inline">\((v,v)\leq0\)</span>，再结合 <span
 class="math inline">\((\cdot,\cdot)\)</span> 半正定可得 <span
 class="math inline">\((v,v)=0\)</span>，即 <span
@@ -2967,7 +2944,7 @@ class="math inline">\(\mathcal{N}_-\)</span> 中的一个。</p>
 <div id="dual-cone-trivial-intersection"
 class="statement proposition plain">
 <p><span class="statement-heading"><span class="statement-label">命题
-32</span>.</span><span class="statement-spah"> </span>在 <span
+31</span>.</span><span class="statement-spah"> </span>在 <span
 class="math inline">\(W\)</span> 不可约且双曲的情形，<span
 class="math inline">\(\mathcal{C}^\ast\cap
 \mathcal{Q}_+,\,\mathcal{C}^\ast\cap\mathcal{Q}_-\)</span>
@@ -2986,7 +2963,7 @@ class="math inline">\(v=cu&#39;-du=cy-dx\in(\mathbb{R}z)^\bot\)</span>，由于
 class="math inline">\(u\)</span> 和 <span
 class="math inline">\(u&#39;\)</span> 的非负线性组合，所以 <span
 class="math inline">\(v\in\mathcal{C}^\ast\)</span>，根据 <a
-href="#dual-cone-nonspace" title="命题 26">命题 26</a> 必须有 <span
+href="#dual-cone-nonspace" title="命题 25">命题 25</a> 必须有 <span
 class="math inline">\((v,v)\leq0\)</span>，从而由正定性得到 <span
 class="math inline">\(v=0\)</span>，于是 <span
 class="math inline">\(cu&#39;=du\)</span>。再结合 <span
@@ -3001,17 +2978,17 @@ class="math inline">\(\mathcal{C}^\ast\cap\mathcal{Q}_+\)</span> 和
 中必有一个是空集。</p>
 <div id="dual-cone-belongs-branch" class="statement corollary plain">
 <p><span class="statement-heading"><span class="statement-label">推论
-33</span>.</span><span class="statement-spah"> </span>在双曲的情形，必有
+32</span>.</span><span class="statement-spah"> </span>在双曲的情形，必有
 <span
 class="math inline">\(\mathcal{C}^\ast\subset\mathcal{Q}_+\)</span> 和
 <span
 class="math inline">\(\mathcal{C}^\ast\subset\mathcal{Q}_-\)</span>（加上原点）之一成立。</p>
 </div>
 <p><strong>证明</strong>：根据上面的推论和 <a href="#dual-cone-nonspace"
-title="命题 26">命题 26</a> 即得。</p>
+title="命题 25">命题 25</a> 即得。</p>
 <div id="tits-closure" class="statement corollary plain">
 <p><span class="statement-heading"><span class="statement-label">推论
-34</span>.</span><span class="statement-spah"> </span>在双曲的情形，Tits
+33</span>.</span><span class="statement-spah"> </span>在双曲的情形，Tits
 锥 <span class="math inline">\(\mathcal{C}\)</span> 包含 <span
 class="math inline">\(\mathcal{N}_+\)</span> 或者 <span
 class="math inline">\(\mathcal{N}_-\)</span> 之一。</p>
@@ -3032,10 +3009,10 @@ class="math inline">\((x,y)\geq0\)</span>，所以 <span
 class="math inline">\(\mathcal{Q}_+\)</span> 和 <span
 class="math inline">\(\mathcal{Q}_-\)</span>
 互相包含在对方的对偶锥中。</p>
-<p>由 <a href="#dual-cone-belongs-branch" title="推论 33">推论
-33</a>，不妨设 <span
+<p>由 <a href="#dual-cone-belongs-branch" title="推论 32">推论
+32</a>，不妨设 <span
 class="math inline">\(\mathcal{C}^\ast\subseteq\mathcal{Q}_+\)</span>（加上原点），利用
-<a href="#dual-dual-cone" title="定理 23">定理 23</a> 取对偶以后有 <span
+<a href="#dual-dual-cone" title="定理 22">定理 22</a> 取对偶以后有 <span
 class="math inline">\(\overline{\mathcal{C}}=\mathcal{C}^{\ast\ast}\supseteq
 \mathcal{Q}_+^\ast\supseteq\mathcal{Q}_-\)</span>，即 <span
 class="math inline">\(\overline{\mathcal{C}}\supset\mathcal{Q}_-\)</span>。由于凸集的内点等于其闭包的内点，即得
@@ -3138,7 +3115,7 @@ level 等于 1。</li>
 </div>
 <div id="level-l" class="statement theorem plain">
 <p><span class="statement-heading"><span class="statement-label">定理
-35</span>.</span><span class="statement-spah"> </span>若 <span
+34</span>.</span><span class="statement-spah"> </span>若 <span
 class="math inline">\(\Gamma\)</span> 是连通的，且 level 等于 <span
 class="math inline">\(l\)</span>，则在 <span
 class="math inline">\(\Gamma\)</span> 中删去任何 <span
@@ -3207,7 +3184,7 @@ class="math inline">\(v\)</span> 是 space-like 的。</p>
 </div>
 <div id="lemma-uv" class="statement lemma plain">
 <p><span class="statement-heading"><span class="statement-label">引理
-36</span>.</span><span class="statement-spah"> </span>如果 <span
+35</span>.</span><span class="statement-spah"> </span>如果 <span
 class="math inline">\(\Gamma\)</span> 的 level 大于等于
 1，并且不是双曲的，则 <span class="math inline">\(V\)</span>
 中存在两个互相正交的向量 <span class="math inline">\(u,v\)</span> 满足
@@ -3242,7 +3219,7 @@ class="math inline">\((u,u)=-1,\,(v,v)=0\)</span>。<span
 class="math inline">\(\blacksquare\)</span></p>
 <div id="level-1" class="statement theorem plain">
 <p><span class="statement-heading"><span class="statement-label">定理
-37</span> <span class="statement-info">(<span class="citation"
+36</span> <span class="statement-info">(<span class="citation"
 data-cites="Maxwell82">George Maxwell (<a href="#ref-Maxwell82"
 role="doc-biblioref">1982</a>)</span>)</span>.</span><span
 class="statement-spah"> </span>如果 <span
@@ -3273,7 +3250,7 @@ class="math inline">\(\mathrm{span}\{\omega_i,\omega_j\}\)</span>
 </ol>
 <p>先证明 1。用反证法，如果 <span class="math inline">\(\Gamma\)</span>
 的 level 是 1 但不是双曲的，则根据 <a href="#lemma-uv"
-title="引理 36">引理 36</a> 我们可以取两个正交的非零向量 <span
+title="引理 35">引理 35</a> 我们可以取两个正交的非零向量 <span
 class="math inline">\(u,v\)</span> 满足 <span
 class="math inline">\((u,u)&lt;0,\, (v,v)=0\)</span>。</p>
 <p>我们有如下两个断言：</p>
@@ -3338,7 +3315,7 @@ class="math inline">\((\omega_s,\omega_t)&lt;0\)</span>。此外二维子空间
 <span class="math inline">\(U={\rm span}\{\omega_s,\omega_t\}\)</span>
 的正交补是 <span class="math inline">\(U^\bot={\rm
 span}\{\alpha_{k},\,k\ne s,t\}\)</span>，根据 <a href="#level-l"
-title="定理 35">定理 35</a> <span class="math inline">\(U^\bot\)</span>
+title="定理 34">定理 34</a> <span class="math inline">\(U^\bot\)</span>
 是正定的，所以 <span class="math inline">\(U\)</span> 必然是双曲的，从而
 <span class="math inline">\(\{\omega_s,\omega_t\}\)</span>
 是分离的。</p>
@@ -3381,7 +3358,7 @@ class="math inline">\(I_-\)</span> 中必有一个是空集。</p>
 class="math inline">\((v, v)=0\)</span> 说明删除 <span
 class="math inline">\(I_0\)</span> 以后得到的子图不是有限的，这与 <span
 class="math inline">\(\Gamma\)</span> 的 level 是 1 和 <a
-href="#level-l" title="定理 35">定理 35</a> 矛盾。所以 <span
+href="#level-l" title="定理 34">定理 34</a> 矛盾。所以 <span
 class="math inline">\(|I_0|\leq 1\)</span>。</p>
 <p>如果 <span class="math inline">\(I_+,\,I_-\)</span>
 都不是空集的话，则 <span class="math inline">\(v_+,v_-\)</span>
@@ -3399,7 +3376,7 @@ v_-)=0\)</span>。现在分情况讨论：</p>
 class="math inline">\(I_-\cup I_0\)</span> 会至少删掉两个顶点，但 <span
 class="math inline">\((v_+,v_+)=0\)</span> 说明剩下的子图不是有限的，与
 <span class="math inline">\(\Gamma\)</span> 的 level 是 1 和 <a
-href="#level-l" title="定理 35">定理 35</a> 矛盾。</li>
+href="#level-l" title="定理 34">定理 34</a> 矛盾。</li>
 <li>如果 <span class="math inline">\(I_0=\emptyset\)</span>，则 <span
 class="math inline">\(S=I_+\cup I_-\)</span>。然而 <span
 class="math inline">\((v_+,v_-)=\sum_{s\in I_+,\,t\in
@@ -3416,14 +3393,14 @@ class="math inline">\(I_-\)</span> 必有一个是空集，断言 2 得证。</p
 <p>至此定理得证。<span class="math inline">\(\blacksquare\)</span></p>
 <div id="level-1-tits" class="statement corollary plain">
 <p><span class="statement-heading"><span class="statement-label">推论
-38</span>.</span><span class="statement-spah"> </span>若 <span
+37</span>.</span><span class="statement-spah"> </span>若 <span
 class="math inline">\(W\)</span> 的 level 为 1，则 Tits 锥的闭包 <span
 class="math inline">\(\overline{ \mathcal{C} }\)</span> 等于 <span
 class="math inline">\(\mathcal{Q}_+\)</span> 或者 <span
 class="math inline">\(\mathcal{Q}_-\)</span> 之一（加上原点）。</p>
 </div>
 <p><strong>证明</strong>：由于 level 1 的群是双曲的，根据 <a
-href="#tits-closure" title="推论 34">推论 34</a>，<span
+href="#tits-closure" title="推论 33">推论 33</a>，<span
 class="math inline">\(\overline{ \mathcal{C} }\)</span> 包含 <span
 class="math inline">\(\mathcal{Q}\)</span> 的一个连通分支，不妨设为
 <span class="math inline">\(\overline{ \mathcal{C}
@@ -3431,7 +3408,7 @@ class="math inline">\(\mathcal{Q}\)</span> 的一个连通分支，不妨设为
 <span class="math inline">\(\overline{ \mathcal{C}
 }\subset\mathcal{Q}\)</span> 和 <span class="math inline">\(\overline{
 \mathcal{C} }\cap\mathcal{Q}_-=\emptyset\)</span>。</p>
-<p>根据 <a href="#level-1" title="定理 37">定理 37</a>，所有的基本权
+<p>根据 <a href="#level-1" title="定理 36">定理 36</a>，所有的基本权
 <span class="math inline">\(\{\omega_s\}\)</span>
 都不是实的且两两分离，所以它们都属于 <span
 class="math inline">\(\mathcal{Q}\)</span>。对任意 <span
@@ -3451,7 +3428,7 @@ class="math inline">\(\overline{ \mathcal{C}
 }\cap\mathcal{Q}_-=\emptyset\)</span>。首先注意到 <span
 class="math inline">\(\mathcal{C}^\ast\)</span> 必然包含某个 time-like
 的向量 <span class="math inline">\((z,z)&lt;0\)</span>。否则根据 <a
-href="#dual-cone-nonspace" title="命题 26">命题 26</a> <span
+href="#dual-cone-nonspace" title="命题 25">命题 25</a> <span
 class="math inline">\(\mathcal{C}^\ast\)</span> 中的非零向量都是
 light-like 的。由于 <span class="math inline">\((\cdot,\cdot)\)</span>
 是双曲的，<span class="math inline">\(\mathcal{C}^\ast\)</span>
@@ -3477,7 +3454,7 @@ Maxwell (<a href="#ref-Maxwell89"
 role="doc-biblioref">1989</a>)</span>。</p>
 <div id="ideal-vertex" class="statement proposition plain">
 <p><span class="statement-heading"><span class="statement-label">命题
-39</span>.</span><span class="statement-spah"> </span>设 <span
+38</span>.</span><span class="statement-spah"> </span>设 <span
 class="math inline">\(s\in S\)</span> 使得如下条件成立：</p>
 <ol type="1">
 <li><span class="math inline">\((\omega_s,\omega_s)=0\)</span>。</li>
@@ -3616,7 +3593,7 @@ Level 2 也是双曲的</h2>
 的群也是双曲的。论证会更加繁琐一些。</p>
 <div id="level-2" class="statement theorem plain">
 <p><span class="statement-heading"><span class="statement-label">定理
-40</span>.</span><span class="statement-spah"> </span>level 等于 2
+39</span>.</span><span class="statement-spah"> </span>level 等于 2
 的群都是双曲的，所有的基本权两两分离。<span
 class="math inline">\(\omega_s\in\Delta^\ast\)</span> 是实的当且仅当
 <span class="math inline">\(T\setminus\{s\}\)</span> 的 level 等于
@@ -3627,8 +3604,8 @@ class="math inline">\(0&lt;(\omega_s,\omega_s)\leq 1\)</span>。</p>
 class="math inline">\(\Gamma\)</span> 是双曲的。</p>
 <p>如果 <span class="math inline">\(\Gamma\)</span> 是不连通的，则 <span
 class="math inline">\(\Gamma\)</span> 必须是一个 level 为 1
-的子图和一个独立顶点的并，由于 <a href="#level-1" title="定理 37">定理
-37</a> 已经证明了 level 1
+的子图和一个独立顶点的并，由于 <a href="#level-1" title="定理 36">定理
+36</a> 已经证明了 level 1
 的群是双曲的，再加上一个独立顶点仍然是双曲的，所以 <span
 class="math inline">\(\Gamma\)</span> 是双曲的。于是我们不妨假设 <span
 class="math inline">\(\Gamma\)</span> 是连通的。</p>
@@ -3645,7 +3622,7 @@ class="math display">\[1 - a^2 + 2abc - b^2-c^2 = 1-a^2 +
 <span class="math inline">\((2, 1)\)</span>，从而是双曲的。</p>
 <p>再处理 <span class="math inline">\(\Gamma\)</span> 包含至少 4
 个顶点的情形。</p>
-<p>仍然根据 <a href="#lemma-uv" title="引理 36">引理 36</a>，如果 <span
+<p>仍然根据 <a href="#lemma-uv" title="引理 35">引理 35</a>，如果 <span
 class="math inline">\(\Gamma\)</span>
 不是双曲的，则我们可以取两个非零且正交的向量 <span
 class="math inline">\(u,v\)</span> 满足 <span class="math inline">\((u,
@@ -3690,7 +3667,7 @@ class="math inline">\(\{v_j,\,j\ne i\}\)</span> 中至少还有一个非零。</
 class="math inline">\(|\Gamma|=4\)</span> 且 <span
 class="math inline">\(v\)</span> 形如 <span
 class="math inline">\(v=v_i\alpha_i + v_j\alpha_j\)</span>。根据 <a
-href="#level-l" title="定理 35">定理 35</a> <span
+href="#level-l" title="定理 34">定理 34</a> <span
 class="math inline">\({\rm span}\{\alpha_i,\alpha_j\}\)</span>
 是有限/或者仿射的，但是由于此平面包含 <span
 class="math inline">\((v,v)=0\)</span>，所以是仿射的，从而 <span
@@ -3852,7 +3829,7 @@ class="math inline">\(\Gamma\setminus\{s\}\)</span> 的基本区域的闭包
 <span
 class="math inline">\(\overline{\mathcal{D}}_s=\mathrm{cone}(\{\omega_t,t\ne
 s\})\subset U\)</span>。而根据 <a href="#level-1-tits"
-title="推论 38">推论 38</a>，<span
+title="推论 37">推论 37</a>，<span
 class="math inline">\(\overline{\mathcal{D}}_s\)</span> 中的点都是
 time-like 或者 light-like 的，并且属于 <span
 class="math inline">\(\mathcal{Q}\)</span> 的同一个连通分支（此 <span
@@ -3933,7 +3910,7 @@ I_-}v_t\alpha_t\)</span>。</p>
 <p>首先 <span class="math inline">\(|I_0|\leq2\)</span> 是显然的，否则
 <span class="math inline">\((v,v)=0\)</span> 与 <span
 class="math inline">\(\Gamma\)</span> 的 level 是 2 和 <a
-href="#level-l" title="定理 35">定理 35</a> 矛盾。</p>
+href="#level-l" title="定理 34">定理 34</a> 矛盾。</p>
 <ol type="1">
 <li>如果 <span class="math inline">\(I_0\ne\emptyset\)</span>，则 <span
 class="math inline">\(I_+,I_-\)</span> 中必有一个为空。否则 <span
@@ -3975,7 +3952,7 @@ data-number="4.4">
 level = 1, 2 等价于双曲和分离</h2>
 <div id="level-12" class="statement theorem plain">
 <p><span class="statement-heading"><span class="statement-label">定理
-41</span>.</span><span class="statement-spah">
+40</span>.</span><span class="statement-spah">
 </span>下面两点是等价的：</p>
 <ol type="1">
 <li><span class="math inline">\(\Gamma\)</span> 的 level 等于 1 或
@@ -3994,8 +3971,8 @@ class="math inline">\((\omega_i,w(\omega_j))\leq0\)</span>，并且二维子空�
 不是正定的。</p>
 <p>对长度 <span class="math inline">\(l(w)\)</span> 归纳：<span
 class="math inline">\(l(w)=0\)</span> 的情形在 <a href="#level-1"
-title="定理 37">定理 37</a> 和 <a href="#level-2" title="定理 40">定理
-40</a> 中已经证明。下面假设 <span
+title="定理 36">定理 36</a> 和 <a href="#level-2" title="定理 39">定理
+39</a> 中已经证明。下面假设 <span
 class="math inline">\(l(w)&gt;0\)</span>，且结论对所有长度 <span
 class="math inline">\(&lt;l(w)\)</span> 的群元素成立。</p>
 <ol type="1">
@@ -4035,8 +4012,8 @@ class="math inline">\(s_i(\omega_i)=w(\omega_j)\)</span>，于是 <span
 class="math display">\[(\omega_i, w(\omega_j))=(\omega_i,
 s_i(\omega_i))=(\omega_i,\omega_i-2\alpha_i)=(\omega_i, \omega_i)-2
 &lt;0.\]</span> 其中最后一个不等号是利用了 <a href="#level-1"
-title="定理 37">定理 37</a> 和 <a href="#level-2" title="定理 40">定理
-40</a> 的结论：若 <span class="math inline">\(\Gamma\)</span> 的 level
+title="定理 36">定理 36</a> 和 <a href="#level-2" title="定理 39">定理
+39</a> 的结论：若 <span class="math inline">\(\Gamma\)</span> 的 level
 是 1 则 <span class="math inline">\((\omega_i,
 \omega_i)\leq0\)</span>，若 <span class="math inline">\(\Gamma\)</span>
 的 level 是 2 则 <span class="math inline">\((\omega_i,\omega_i)\leq
@@ -4455,7 +4432,7 @@ class="math inline">\((k_1,k_2)=(\mathbf{n}_1,\mathbf{n}_2)\)</span>
 是它们法向量的夹角。</p>
 <div id="suff-for-disjoint" class="statement proposition plain">
 <p><span class="statement-heading"><span class="statement-label">命题
-42</span>.</span><span class="statement-spah"> </span>设 <span
+41</span>.</span><span class="statement-spah"> </span>设 <span
 class="math inline">\(B_1,B_2\)</span> 是两个球，且 <span
 class="math inline">\(B_1,B_2\)</span> 的内部不相交。设 <span
 class="math inline">\((k_1,k_2)\)</span> 分别是它们对应的 space-like
@@ -4609,7 +4586,7 @@ class="math display">\[C_k = \{v\in\mathcal{H}\mid
 (v,k)\geq0\}.\]</span></p>
 <div id="disjoint-pair" class="statement lemma plain">
 <p><span class="statement-heading"><span class="statement-label">引理
-43</span>.</span><span class="statement-spah"> </span>设 <span
+42</span>.</span><span class="statement-spah"> </span>设 <span
 class="math inline">\(\mathcal{P}\)</span> 是球堆且 <span
 class="math inline">\(k_1\ne k_2\in\mathcal{P}\)</span>，则 <span
 class="math inline">\(C_{k_1}\cap C_{k_2}\)</span> 和 <span
@@ -4652,7 +4629,7 @@ class="math inline">\(C_{-k_{1}}\cap C_{-k_{2}}\)</span>
 class="math inline">\(k_1+k_2\)</span> 共线。</p>
 <div id="intersect-pair" class="statement lemma plain">
 <p><span class="statement-heading"><span class="statement-label">引理
-44</span>.</span><span class="statement-spah"> </span>设 <span
+43</span>.</span><span class="statement-spah"> </span>设 <span
 class="math inline">\(\mathcal{P}\)</span> 是球堆且 <span
 class="math inline">\(k_1\ne k_2\in\mathcal{P}\)</span>。如果 <span
 class="math inline">\(v\in\mathcal{H}\)</span> 满足 <span
@@ -4679,7 +4656,7 @@ class="math inline">\(t\in(0,a)\)</span> 有无穷多个取值，且它们对应
 class="math inline">\(|C_{k_{1}}\cap C_{k_{2}}|&gt;1\)</span>。</p>
 <div id="intersect-triple" class="statement lemma plain">
 <p><span class="statement-heading"><span class="statement-label">引理
-45</span>.</span><span class="statement-spah"> </span>设 <span
+44</span>.</span><span class="statement-spah"> </span>设 <span
 class="math inline">\(\mathcal{P}\)</span> 是球堆，<span
 class="math inline">\(C_{k_{1}},C_{k_{2}},C_{k_{3}}\)</span> 是 <span
 class="math inline">\(\mathcal{P}\)</span> 中三个互不相同的球。如果
@@ -4702,7 +4679,7 @@ class="math inline">\(k_1+k_2+k_3\)</span> 是一个 time-like 的向量：
 class="math inline">\((v,k_1+k_2+k_3)=(v,k_3)&gt;0\)</span>。记 <span
 class="math inline">\(a=(v,k_3)&gt;0\)</span>。</p>
 <p>考察 <span class="math inline">\(u=v-tk_3,\,t\in(0,a)\)</span>，仿照
-<a href="#intersect-pair" title="引理 44">引理 44</a>
+<a href="#intersect-pair" title="引理 43">引理 43</a>
 中的证明，我们可以得到 <span
 class="math inline">\((u,u)&lt;0,\,(u,v)&lt;0\)</span> 从而 <span
 class="math inline">\(u\sim v\)</span>，从而 <span
@@ -4716,7 +4693,7 @@ C_{k_{2}}\)</span> 只包含一个点 <span class="math inline">\(v\)</span>
 矛盾。</p>
 <div id="thm-sphere-packing" class="statement theorem plain">
 <p><span class="statement-heading"><span class="statement-label">定理
-46</span>.</span><span class="statement-spah"> </span>设 <span
+45</span>.</span><span class="statement-spah"> </span>设 <span
 class="math inline">\(\mathcal{P}\)</span> 是 <span
 class="math inline">\(V\)</span>
 的一个非空子集，则下面两点是等价的：</p>
@@ -4731,7 +4708,7 @@ class="math inline">\(C_{k&#39;}\)</span> 至多有一个公共点。</li>
 </div>
 <p><strong>证明</strong>：</p>
 <p>1 <span class="math inline">\(\Rightarrow\)</span> 2：根据 <a
-href="#disjoint-pair" title="引理 43">引理 43</a>，我们可以不妨设 <span
+href="#disjoint-pair" title="引理 42">引理 42</a>，我们可以不妨设 <span
 class="math inline">\(k_1,k_2\in\mathcal{P}\)</span> 使得 <span
 class="math inline">\(C_{k_1}\cap C_{k_2}\)</span>
 至多包含一个点。我们来证明 <span
@@ -4788,16 +4765,16 @@ class="math inline">\((v,k)\geq0\)</span> 和 <span
 class="math inline">\((v,k&#39;)\geq0\)</span>，并且由于 <span
 class="math inline">\(\{k,k&#39;\}\ne \{k_1,k_2\}\)</span>
 这俩不等式至少有一个严格成立，这与 <a href="#intersect-triple"
-title="引理 45">引理 45</a> 矛盾。</p>
+title="引理 44">引理 44</a> 矛盾。</p>
 <p>总之 <span class="math inline">\(w\sim v\)</span>，从而 <span
 class="math inline">\(w\)</span> 的某个正倍数 <span
 class="math inline">\(w&#39;\)</span> 属于 <span
 class="math inline">\(\mathcal{H}\)</span>。我们有 <span
 class="math inline">\((w&#39;,k)\leq 0\)</span> 和 <span
 class="math inline">\((w&#39;,k&#39;)\leq0\)</span>，这两个不等式至少有一个是严格成立的，于是由
-<a href="#intersect-pair" title="引理 44">引理 44</a> <span
+<a href="#intersect-pair" title="引理 43">引理 43</a> <span
 class="math inline">\(C_{-k}\cap C_{-k&#39;}\)</span> 包含多于 1
-个点。于是由 <a href="#disjoint-pair" title="引理 43">引理 43</a> <span
+个点。于是由 <a href="#disjoint-pair" title="引理 42">引理 42</a> <span
 class="math inline">\(C_k\cap C_{k&#39;}\)</span> 恰好包含 <span
 class="math inline">\(v\)</span>。</p>
 <p>2 <span class="math inline">\(\Rightarrow\)</span> 1: 不妨设 <span
@@ -4837,7 +4814,7 @@ class="math inline">\(\hat{\omega}=\omega/\sqrt{(\omega,\omega)}\)</span>
 </div>
 <div id="real-cone-closure" class="statement theorem plain">
 <p><span class="statement-heading"><span class="statement-label">定理
-47</span>.</span><span class="statement-spah"> </span>如果 <span
+46</span>.</span><span class="statement-spah"> </span>如果 <span
 class="math inline">\(W\)</span> 是不可约、双曲的，且 level 大于等于
 2，则 <span class="math inline">\(\overline{\mathcal{C}_r}= \overline{
 \mathcal{C} }\)</span>。</p>
@@ -4952,22 +4929,22 @@ class="math display">\[1=(\omega_s,\alpha_s)=\sum_{i\in X} (\omega_s,
 \omega_i)\underbrace{(\alpha_s,\alpha_i)}_{\leq0}.\]</span> 所以必须所有
 <span class="math inline">\((\omega_s, \omega_i)&lt;0\)</span>。所以
 <span class="math inline">\(X\cup \{s\}\)</span> 构成的子图满足 <a
-href="#ideal-vertex" title="命题 39">命题 39</a> 的条件，于是我们得到
+href="#ideal-vertex" title="命题 38">命题 38</a> 的条件，于是我们得到
 <span class="math display">\[\omega_s\in\overline{
 \mathrm{cone}(\bigcup_{w\in W_I}w(\omega_t))
 }\subset\overline{\mathcal{C}_r}.\]</span></p></li>
 </ol>
 <div id="max-packing" class="statement theorem plain">
 <p><span class="statement-heading"><span class="statement-label">定理
-48</span>.</span><span class="statement-spah"> </span>若 <span
+47</span>.</span><span class="statement-spah"> </span>若 <span
 class="math inline">\(W\)</span> 是双曲的，则 <span
 class="math inline">\(\hat{\Omega_r}\)</span> 是非平凡的球堆当且仅当
 <span class="math inline">\(\Gamma\)</span> 的 level 是 2，这时 <span
 class="math inline">\(\hat{\Omega_r}\)</span> 还是极大球堆。</p>
 </div>
 <p><strong>证明</strong>：若 <span class="math inline">\(\Gamma\)</span>
-的 level 是 2，根据 <a href="#level-2" title="定理 40">定理
-40</a>，<span class="math inline">\(\Omega_r\)</span>
+的 level 是 2，根据 <a href="#level-2" title="定理 39">定理
+39</a>，<span class="math inline">\(\Omega_r\)</span>
 中的元素两两分离，将其单位化后得到的 <span
 class="math inline">\(\hat{\Omega_r}\)</span> 仍然两两分离，所以 <span
 class="math inline">\(\hat{\Omega_r}\)</span> 的元素两两之间的内积 <span
@@ -4977,20 +4954,20 @@ class="math inline">\(\hat{\Omega_r}\)</span>
 class="math inline">\(\hat{\Omega_r}\)</span>
 中的球都不相交或者相切的话，设这个球对应的单位向量是 <span
 class="math inline">\(k\in\mathcal{S}\)</span>，则根据 <a
-href="#suff-for-disjoint" title="命题 42">命题 42</a>，有 <span
+href="#suff-for-disjoint" title="命题 41">命题 41</a>，有 <span
 class="math inline">\((k,\hat{\omega})\leq -1\)</span> 对任何 <span
 class="math inline">\(\hat{\omega}\in\hat{\Omega_r}\)</span> 成立，从而
 <span class="math inline">\((k,\omega)&lt;0\)</span> 对任何 <span
 class="math inline">\(\omega\in\Omega_r\)</span> 成立，从而 <span
 class="math inline">\((k,y)\leq0\)</span> 对任何 <span
 class="math inline">\(y\in\overline{\mathcal{C}_r}=\mathrm{cone}(\Omega_r)\)</span>
-成立。根据 <a href="#real-cone-closure" title="定理 47">定理
-47</a>，<span class="math inline">\(\overline{\mathcal{C}_r}=\overline{
+成立。根据 <a href="#real-cone-closure" title="定理 46">定理
+46</a>，<span class="math inline">\(\overline{\mathcal{C}_r}=\overline{
 \mathcal{C} }\)</span>，这意味着 <span
 class="math inline">\((k,y)\leq0\)</span> 对任何 <span
 class="math inline">\(y\in\mathcal{C}\)</span> 成立，即 <span
 class="math inline">\(-k\in\mathcal{C}^\ast\)</span>。根据 <a
-href="#dual-cone-nonspace" title="命题 26">命题 26</a> <span
+href="#dual-cone-nonspace" title="命题 25">命题 25</a> <span
 class="math inline">\((k,k)=(-k,-k)\leq0\)</span>，矛盾。这就证明了
 level 2 时 <span class="math inline">\(\Omega_r\)</span>
 是极大堆积。</p>
@@ -5041,7 +5018,7 @@ class="math inline">\(B_i\)</span> 和 <span
 class="math inline">\(C_j\)</span> 正交。</li>
 <li>又 <span
 class="math inline">\((\alpha_i,\omega_i)=1\)</span>，以及根据 <a
-href="#level-2" title="定理 40">定理 40</a> 每个 <span
+href="#level-2" title="定理 39">定理 39</a> 每个 <span
 class="math inline">\(\omega_i\)</span> 满足 <span
 class="math inline">\(0&lt;(\omega_i,\omega_i)\leq1\)</span>，所以归一化以后
 <span
